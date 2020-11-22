@@ -1,0 +1,91 @@
+.wrapper-slider {
+  // background: $BackgroundHeroSlider;
+  width: 100%;
+  min-height: 720px;
+  position: relative;
+  border-bottom: 1px solid green;
+  .slide {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    display: flex;
+    align-items: flex-end;
+    background: url('../img/hero-slider/slide1/hero-bg2.png') 91px 0 no-repeat, url('../img/hero-slider/slide1/hero-bg1.png') center 9px no-repeat;
+    &__count {
+      position:absolute;
+      right: 0;
+    }
+    &__description {
+      margin-bottom: 130px;
+      font-family: 'Playfair Display';
+      font-size: 28px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 1.6em;
+      color: #48555d;
+    }
+  }
+  .button-block__left, .button-block__right {
+    position:absolute;
+    top: 33%;
+    transform: translateY(-33%);
+    font-family: 'Lato';
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #31383e;
+    cursor: pointer;
+  }
+  .button-block__left {
+    left: 0;
+    transform: rotate(-90deg);
+  }
+  .button-block__right {
+    right: 0;
+    transform: rotate(90deg);
+  }
+  .button-block__right::after {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 2px;
+    background-color: #a853ec;
+    position:absolute;
+    left: 35%;
+    bottom: -45px;
+    transform: rotate(90deg);
+  }
+  .button-block_active {
+    color: #5e00ca;
+  }
+  .dot-block {
+    display: flex;
+    justify-content: space-between;
+    width: 113px;
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 25px;
+      height: 25px;
+      border: 2px solid transparent;
+      border-radius: 50%;
+    }
+    &__item_active {
+      border: 2px solid #ed751b;
+    }
+    &__inner{
+      width: 5px;
+      height: 5px;
+      background: #48555d;
+      border-radius: 50%;
+    }
+    &__inner_active {
+      background: #ed751b;
+    }
+  }
+}
