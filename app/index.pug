@@ -8,5 +8,43 @@ html(lang="en")
     link(href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300;1,700&family=Montserrat+Alternates&family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet")
     link(rel="stylesheet", href="css/style.css")
   body
-    button.burger-menu
-      span.burger-menu__line
+    header.header-block
+      .container
+        .header-inner
+          .logo-block
+            a.logo-block__link
+             img(src="img/logo.png", alt="")
+          .contact-block
+            .contact-block__icon
+              img(src="img/header/phone.png", alt="")
+            .contact-block__phone
+              a(href="tel:+71885696822") +71 88 569 6822
+          .nav-block.nav-block_margin-left-auto
+            button.burger-menu
+              span.burger-menu__line
+            nav.nav
+              ul.menu
+                li.menu__item
+                  a.menu__link(href="#") About
+                li.menu__item
+                  a.menu__link(href="#") Projects
+                li.menu__item
+                  a.menu__link(href="#") Blog
+                li.menu__item
+                  a.menu__link(href="#") Contact
+            
+          .social-icons-block
+            .social-icons-block__item
+              a.social-icons-block__link
+                img(src="img/header/header-social-icons/instagram.png", alt="")
+            .social-icons-block__item
+              a.social-icons-block__link
+                img(src="img/header/header-social-icons/facebook.png", alt="")
+            .social-icons-block__item
+              a.social-icons-block__link
+                img(src="img/header/header-social-icons/twitter.png", alt="")
+            .social-icons-block__item
+              a.social-icons-block__link
+                img(src="img/header/header-social-icons/behance.png", alt="")
+    main.main-block
+    script(src="js/script.js")
