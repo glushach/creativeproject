@@ -222,14 +222,21 @@ button {
   min-height: 720px;
   /*Обратить на это внимание при адаптации*/
   position: relative;
+  /*Это выравнивает боковые тригерры*/
   /*Slide modify*/
+}
+
+.wrapper-slider .truck-slider {
+  width: 100%;
+  /*При абсолютном позиционировани width и height иногда обязательны*/
+  height: 100%;
+  position: absolute;
 }
 
 .wrapper-slider .slide {
   width: 100%;
   height: 100%;
-  position: absolute;
-  z-index: 1;
+  position: relative;
 }
 
 .wrapper-slider .slide__img {
@@ -241,6 +248,7 @@ button {
   top: 0;
   right: 400px;
   /*Обратить на это внимание при адаптации*/
+  z-index: 1;
 }
 
 .wrapper-slider .slide__img img {
@@ -307,6 +315,22 @@ button {
   text-transform: uppercase;
   color: #31383e;
   cursor: pointer;
+}
+
+.wrapper-slider .button-block__left:hover {
+  -webkit-box-shadow: 3px 3px 20px #a53689;
+          box-shadow: 3px 3px 20px #a53689;
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all;
+}
+
+.wrapper-slider .button-block__right:hover {
+  -webkit-box-shadow: 3px 3px 20px #a53689;
+          box-shadow: 3px 3px 20px #a53689;
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all;
 }
 
 .wrapper-slider .button-block__left {
@@ -391,6 +415,16 @@ button {
   border: 2px solid transparent;
   -webkit-border-radius: 50%;
           border-radius: 50%;
+  cursor: pointer;
+  -webkit-transition: .5s all;
+  -o-transition: .5s all;
+  transition: .5s all;
+}
+
+.wrapper-slider .dot-block__item:hover {
+  -webkit-transform: scale(1.2);
+      -ms-transform: scale(1.2);
+          transform: scale(1.2);
 }
 
 .wrapper-slider .dot-block__item_active {

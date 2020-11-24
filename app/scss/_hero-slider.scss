@@ -2,18 +2,25 @@
   background: $BackgroundHeroSlider;
   width: 100%;
   min-height: 720px; /*Обратить на это внимание при адаптации*/
-  position: relative;
+  position: relative; /*Это выравнивает боковые тригерры*/
+  .truck-slider {
+    width: 100%; /*При абсолютном позиционировани width и height иногда обязательны*/
+    height: 100%;
+    position: absolute;
+  }
+
   .slide {
     width: 100%;
     height: 100%;
-    position:absolute;
-    z-index: 1;
+    position: relative;
+    // z-index: 1; /*из-за этого не работал cursor pointer у триггеров*/
     &__img {
       max-width: 1202px; /*Обратить на это внимание при адаптации*/
       max-height: 521px; /*Обратить на это внимание при адаптации*/
-      position:absolute;
+      position: absolute;
       top: 0;
       right: 400px;  /*Обратить на это внимание при адаптации*/
+      z-index: 1;
       img {
         width: 100%;
         height: 100%;
@@ -67,6 +74,14 @@
     color: #31383e;
     cursor: pointer;
   }
+  .button-block__left:hover {
+    box-shadow: 3px 3px 20px #a53689;
+    transition: .5s all;
+  }
+  .button-block__right:hover {
+    box-shadow: 3px 3px 20px #a53689;
+    transition: .5s all;
+  }
   .button-block__left {
     left: 0;
     transform: rotate(-90deg);
@@ -117,6 +132,11 @@
       height: 25px;
       border: 2px solid transparent;
       border-radius: 50%;
+      cursor: pointer;
+      transition: .5s all;
+    }
+    &__item:hover {
+      transform: scale(1.2);
     }
     &__item_active {
       border: 2px solid #ed751b;
