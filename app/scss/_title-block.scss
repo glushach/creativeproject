@@ -1,0 +1,46 @@
+.title-block {
+  background: $BackgroundTitleBlock;
+  padding: 0 15px;
+  min-height: 515px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .main-title {
+    max-width: 1635px;
+    font-size: 70px;
+    font-family: "Playfair Display";
+    color: rgb(255, 255, 255);
+    text-align: center;
+  }
+  .signature-mt {
+    margin-top: 22px;
+    width: 130px;
+    height: 96px;
+  }
+}
+
+@media(max-width: 991px) {
+  .title-block {
+    min-height: 415px;
+    .main-title {
+      font-size: 50px;
+    }
+  }
+}
+@media(max-width: 767px) {
+  .title-block {
+    min-height: 315px;
+    .main-title {
+      font-size: 40px;
+    }
+  }
+}
+@media(max-width: 575px) {
+  .title-block {
+    min-height: 315px;
+    .main-title {
+      font-size: 30px;
+    }
+  }
+}

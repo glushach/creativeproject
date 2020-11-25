@@ -1,3 +1,4 @@
+@import "./normalize.scss";
 @import "./variables";
 
 * {
@@ -22,7 +23,7 @@ button {
 }
 @import "./header";
 @import "./hero-slider";
-
-
+@import "./play-btn-block";
+@import "./title-block";
 
 

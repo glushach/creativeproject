@@ -1,0 +1,145 @@
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.buttom-wrapper {
+    background: $BackgroundButtonBlock;
+    min-height: 525px;
+    @include flexCenter;
+
+  .vawe-100 {
+    @include flexCenter;
+    width: 405px;
+    height: 405px;
+    background-color: rgba(172, 55, 142, 0.02);
+    border-radius:50%;
+  }
+  .wave-75 {
+    @include flexCenter;
+    width: 345px;
+    height: 345px;
+    background-color: rgba(172, 55, 142, 0.039);
+    border-radius:50%;
+    animation: wave-75 linear 1s infinite;
+  }
+  .wave-50 {
+    @include flexCenter;
+    width: 275px;
+    height: 275px;
+    background-color: rgba(172, 55, 142, 0.071);
+    border-radius:50%;
+    animation: wave-50 linear 1s infinite;
+  }
+  .wave-25 {
+    @include flexCenter;
+    width: 210px;
+    height: 210px;
+    background-color: rgba(172, 55, 142, 0.188);
+    border-radius:50%;
+    animation: wave-25 linear 1s infinite;
+  }
+  .wave-0 {
+    @include flexCenter;
+    width: 170px;
+    height: 170px;
+    border: 1px solid #ed751b;
+    border-radius: 50%;
+    cursor: pointer;
+    &__link {
+      display: block;
+      width: 160px;
+      height: 160px;
+      img {
+        width: 100%;
+        height: 100%;
+        transition:.3s;
+        position: relative;
+        z-index: 1;
+        border-radius: 50%;
+        animation: wave-0 linear 1s infinite;
+      }
+    }
+    @keyframes wave-0 {
+      0% {
+      box-shadow:0 8px 10px rgba(172, 55, 142,0.3),0 0 0 0 rgba(172, 55, 142,0.2),0 0 0 0 rgba(172, 55, 142,0.2)
+    }
+      40% {
+      box-shadow:0 8px 10px rgba(172, 55, 142,0.3),0 0 0 15px rgba(172, 55, 142,0.2),0 0 0 0 rgba(172, 55, 142,0.2)
+    }
+      80% {
+      box-shadow:0 8px 10px rgba(172, 55, 142,0.3),0 0 0 30px rgba(172, 55, 142,0),0 0 0 26.7px rgba(172, 55, 142,0.067)
+    }
+      100% {
+      box-shadow:0 8px 10px rgba(172, 55, 142,0.3),0 0 0 30px rgba(172, 55, 142,0),0 0 0 40px rgba(172, 55, 142,0.0)
+    }
+    }
+
+
+    @keyframes wave-25 {
+      0% {
+      box-shadow:0 8px 10px rgba(172, 55, 142,0.115),0 0 0 0 rgba(172, 55, 142,0.08),0 0 0 0 rgba(172, 55, 142,0.08)
+    }
+      40% {
+      box-shadow:0 8px 10px rgba(172, 55, 142,0.115),0 0 0 15px rgba(172, 55, 142,0.08),0 0 0 0 rgba(172, 55, 142,0.08)
+    }
+      80% {
+      box-shadow:0 8px 10px rgba(172, 55, 142,0.115),0 0 0 30px rgba(172, 55, 142,0),0 0 0 26.7px rgba(172, 55, 142,0.025)
+    }
+      100% {
+      box-shadow:0 8px 10px rgba(172, 55, 142,0.115),0 0 0 30px rgba(172, 55, 142,0),0 0 0 40px rgba(172, 55, 142,0.0)
+    }
+    }
+
+
+    @keyframes wave-75 {
+      0% {
+      box-shadow:0 8px 10px rgba(172, 55, 142,0.064),0 0 0 0 rgba(172, 55, 142,0.044),0 0 0 0 rgba(172, 55, 142,0.044)
+    }
+      40% {
+      box-shadow:0 8px 10px rgba(172, 55, 142,0.064),0 0 0 15px rgba(172, 55, 142,0.044),0 0 0 0 rgba(172, 55, 142,0.044)
+    }
+      80% {
+      box-shadow:0 8px 10px rgba(172, 55, 142,0.064),0 0 0 30px rgba(172, 55, 142,0),0 0 0 26.7px rgba(172, 55, 142,0.014)
+    }
+      100% {
+      box-shadow:0 8px 10px rgba(172, 55, 142,0.064),0 0 0 30px rgba(172, 55, 142,0),0 0 0 40px rgba(172, 55, 142,0.0)
+    }
+    }
+  }
+}
+
+
+
+
+/*=========МЕДИА ЗАПРОСЫ=========*/
+@media(max-width: 575px) {
+    .buttom-wrapper {
+      min-height: 350px;
+    .vawe-100 {
+      width: 300px;
+      height: 300px;
+    }
+    .wave-75 {
+      width: 240px;
+      height: 240px;
+    }
+    .wave-50 {
+      width: 170px;
+      height: 170px;
+    }
+    .wave-25 {
+      width: 105px;
+      height: 105px;
+    }
+    .wave-0 {
+      width: 65px;
+      height: 65px;
+      &__link {
+        width: 55px;
+        height: 55px;
+      }
+    }
+  }
+} //end media
