@@ -108,10 +108,54 @@ html(lang="en")
                     .wave-0
                       a(href="#").wave-0__link
                         img(src="img/play-button/play-button-icon.png", alt="")
-      section.title-block
-        h1.main-title We're a designer & a developer who love building cool stuff with our clients.
-        .signature.signature-mt
-          img(src="img/title-block/signature.png", alt="")
+      .hero-section
+        .container
+          section.title-block
+              h1.main-title We're a designer & a developer who love building cool stuff with our clients.
+              .signature.signature-mt
+                img(src="img/title-block/signature.png", alt="")
+      .vertical-slider
+        .container
+          .vertical-inner
+            .truck-slider
+
+
+              .slides
+                .slides__item
+                  .slides__img1
+                    img(src="img/vertical-slider/slide1/img1.png", alt="")
+                  .slides__img2
+                    img(src="img/vertical-slider/slide1/img2.png", alt="")
+                  .slides__count
+                    span.current 01
+                    span.total /05
+                .slides__item
+                  h2.slides__title Strategy & Creative <br/> We design and build digital products, and services we believe in.
+                  .slides__description Strategy is not something you can retrospectively apply in order to make irrelevant ideas seem coherent strategists start out with a clear approach to ensure our creative proposal will match your business needs.
+                  button.slides__button Learn more
+
+
+              //- .slides
+              //-   .slides__item
+              //-     .slides__img1
+              //-       img(src="img/vertical-slider/slide1/img1.png", alt="")
+              //-     .slides__img2
+              //-       img(src="img/vertical-slider/slide2/img2.png", alt="")
+              //-     .slides__count
+              //-       span.current 01
+              //-       span.total /05
+              //-   .slides__item
+              //-     h2.slides__title Strategy & Creative <br/> We design and build digital products, and services we believe in.
+              //-     .slides__description Strategy is not something you can retrospectively apply in order to make irrelevant ideas seem coherent strategists start out with a clear approach to ensure our creative proposal will match your business needs.
+              //-     button.slides__button Learn more
+
+
+
+            .trigger-block
+              .trigger-block__prev.trigger-block_active
+                span 1
+              .trigger-block__next
+                span 1
 
 
     script(src="js/script.js")

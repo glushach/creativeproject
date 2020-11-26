@@ -1,10 +1,15 @@
 window.addEventListener('DOMContentLoaded', () => {
   const menuItem = document.querySelectorAll('.nav'),
-  hamburger = document.querySelectorAll('.burger-menu');
+  hamburger = document.querySelectorAll('.burger-menu'),
+  lineActive = document.querySelectorAll('.burger-menu__line');
 
   hamburger.forEach(item => {
     item.addEventListener('click', () => {
       item.classList.toggle('burger-menu_active');
+
+      lineActive.forEach(item => {
+        item.classList.toggle('burger-menu__line_active');
+      });
       menuItem.forEach(item => {
         item.classList.toggle('nav_active');
       });

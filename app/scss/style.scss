@@ -21,6 +21,122 @@ button {
   background: transparent;
   outline: none;
 }
+
+.vertical-slider {
+  @mixin size {
+    width: 100%;
+  }
+  $MarginXslidesItem: 110px; /*обратить внимание при адаптации*/
+  @include size;
+  
+  .vertical-inner {
+    @include size;
+    min-height: 2150px;
+    background: $BackgroundVerticalSlider url('../img/vertical-slider/bg-img.png') left (top) no-repeat;
+    position: relative;
+    // display: flex;
+    justify-content: flex-end;
+ 
+
+
+    .truck-slider {
+      display: flex;
+      .slides {
+        @include size;
+        display: flex; /*обратить внимание при адаптации*/
+        &__item {
+          margin: 0 $MarginXslidesItem;
+          max-width: 738px; /*726px;*/
+          position: relative;
+          border: 1px solid red;
+        }
+        &__img1 {
+          position: relative;
+          @include size;
+          img {
+            @include size;
+          }
+        }
+
+        &__img1::before {
+          content: '';
+          display: block;
+          width: 23.4%;
+          height: 230px; /*обратить внимание при адаптации*/
+          background-color: #ed751b;
+          background-image: linear-gradient(55.0deg, #e84b37 14%, #ee7d16 85%);
+          position:absolute;
+          top: 30%;
+        }
+
+
+        &__img2 {
+          max-width: 440px;
+          position:absolute;
+          top: 30%;
+          right: -14%;
+          left: 42%;
+          img {
+            @include size;
+            
+          }
+        }
+
+        &__count {
+          position:absolute;
+          left: 20%;
+          bottom: -12%;
+          span.current, span.total {
+            font-family: 'Playfair Display';
+            font-size: 44px;
+            line-height: 70px;
+            font-weight: 400;
+            color: #ffffff;
+          }
+          span.total {
+            color: #22292d;
+          }
+        }
+
+        /*Стили втогого item*/
+        &__title {
+          margin-top: -20px; /*обратить внимание при адаптации*/
+          margin-bottom: 28px; /*обратить внимание при адаптации*/
+          font-family: 'Playfair Display';
+          font-size: 44px;
+          line-height: 61px;
+          font-weight: 400;
+          color: #ffffff;
+        }
+        &__description {
+          margin-bottom: 36px;
+          max-width: 635px;
+          font-family: 'Lato';
+          font-size: 22px;
+          line-height: 34px;
+          font-weight: 300;
+          color: #ffffff;
+        }
+        &__button  {
+          width: 200px;
+          height: 54px;
+          background-color: #000000;
+          background-image: linear-gradient(55.0deg, #e84b37 25%, #ee7d16 74%);
+          font-family: 'Montserrat Alternates';
+          font-size: 14px;
+          line-height: 32px;
+          font-weight: 400;
+          text-transform: uppercase;
+          color: #ffffff;
+        }
+      } //end slides
+    } //end truck-slider
+  } //end vertical-inner
+} //end vertical-slider
+
+
+
+
 @import "./header";
 @import "./hero-slider";
 @import "./play-btn-block";
