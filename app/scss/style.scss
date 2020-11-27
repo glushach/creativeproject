@@ -22,119 +22,334 @@ button {
   outline: none;
 }
 
-.vertical-slider {
-  @mixin size {
-    width: 100%;
+
+
+
+
+
+
+.section-promo {
+  @mixin flex($jc: flex-start, $ai: flex-start, $fd: row) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-direction: $fd;
   }
-  $MarginXslidesItem: 110px; /*обратить внимание при адаптации*/
-  @include size;
-  
-  .vertical-inner {
-    @include size;
-    min-height: 2150px;
-    background: $BackgroundVerticalSlider url('../img/vertical-slider/bg-img.png') left (top) no-repeat;
-    position: relative;
-    // display: flex;
-    justify-content: flex-end;
+  @mixin sizeImg {
+      img {
+        width: 100%;
+      }
+    }
+  @mixin promoBlockItemMarginY {
+    margin: 225px 0 200px 0; /*обратить внимание при адаптации*/
+  }
+  $width100: 100%;
+  $promo-blockMarginRight: 110px; /*Обратить внимание при адаптаации*/
+  $promoBlockItemMarginX: 110px; /*обратить внимание при адаптации*/
+
+
+
+  /*НАЧАЛО КОДА БЛОКА*/
+  width: $width100;
+  @include flex(center);
+  background: $BackgroundSectionPromo url('../img/promo-section/bg-img.png') left (top) no-repeat;
  
-
-
-    .truck-slider {
-      display: flex;
-      .slides {
-        @include size;
-        display: flex; /*обратить внимание при адаптации*/
-        &__item {
-          margin: 0 $MarginXslidesItem;
-          max-width: 738px; /*726px;*/
-          position: relative;
-          border: 1px solid red;
+  .section-promo-inner {
+    width: $width100;
+    @include flex(flex-start, flex-end, column);
+    .promo-block {
+      margin-right: $promo-blockMarginRight;
+      max-width: 1560px;
+      @include flex(space-between);
+      &__item {
+        @include promoBlockItemMarginY;
+        max-width: 738px;
+        position: relative;
+        border: 1px solid red;
+        &_text-right {
+          text-align: right;
         }
-        &__img1 {
-          position: relative;
-          @include size;
-          img {
-            @include size;
-          }
+        &:first-child {
+          margin-right: $promoBlockItemMarginX;
         }
+        &:last-child {
+          margin-left: $promoBlockItemMarginX;
+        }
+      }
 
-        &__img1::before {
-          content: '';
-          display: block;
-          width: 23.4%;
-          height: 230px; /*обратить внимание при адаптации*/
-          background-color: #ed751b;
-          background-image: linear-gradient(55.0deg, #e84b37 14%, #ee7d16 85%);
-          position:absolute;
+      &__img1 {
+        position: relative;
+        width: $width100;
+        @include sizeImg;
+      }
+
+
+
+      &__img2 {
+        max-width: 440px;
+        position:absolute;
+        top: 30%;
+        right: -14%;
+        left: 42%;
+        @include sizeImg;
+        &_reversed {
           top: 30%;
+          left: -14%;
+          right: 42%;
         }
+      }
 
 
-        &__img2 {
-          max-width: 440px;
-          position:absolute;
-          top: 30%;
-          right: -14%;
-          left: 42%;
-          img {
-            @include size;
-            
-          }
-        }
 
-        &__count {
-          position:absolute;
-          left: 20%;
-          bottom: -12%;
-          span.current, span.total {
-            font-family: 'Playfair Display';
-            font-size: 44px;
-            line-height: 70px;
-            font-weight: 400;
-            color: #ffffff;
-          }
-          span.total {
-            color: #22292d;
-          }
-        }
+      &__img1::before {
+        content: '1';
+        display: block;
+        width: 18.4%;
+        height: 207px;
+        background-color:#ed751b;
+        position:absolute;
+        top: 30%;
+        left: -23.5%;
 
-        /*Стили втогого item*/
-        &__title {
-          margin-top: -20px; /*обратить внимание при адаптации*/
-          margin-bottom: 28px; /*обратить внимание при адаптации*/
+        transform: rotate(180deg);
+        text-align: right;
+        color: #ffffff;
+        font-size: 43px;
+        font-family: sans-serif;
+        padding-right: 31px;
+        padding-top: 23px;
+      }
+      .promo-block__img1_reversed::before {
+        background-color: #372b73;
+        top: 30%;
+        left: 100%;
+      }
+      &__img1::after {
+        content: '';
+        display: block;
+        width: 23.4%;
+        height: 230px; /*обратить внимание при адаптации*/
+        background-color: #ed751b;
+        background-image: linear-gradient(55.0deg, #e84b37 14%, #ee7d16 85%);
+        position:absolute;
+        top: 30%;
+      }
+      .promo-block__img1_reversed::after {
+        background-image: linear-gradient(36.0deg, #5e00ca 4%, #d5536f 95%);
+        top: 30%;
+        right: 0;
+      }
+
+      &__img2::after {
+        content: '';
+        display: block;
+        width: 8.8%;
+        height: 230px; /*обратить внимание при адаптации*/
+        background-color: #ed751b;
+        position:absolute;
+        top: 0%;
+        right: -8.8%;
+      }
+      .promo-block__img2_reversed::after {
+        background-color: #ac378e;
+        top: 0%;
+        right: 100%;
+      }
+
+      &__count {
+        position:absolute;
+        left: 20%;
+        bottom: -12%;
+        span.current, span.total {
           font-family: 'Playfair Display';
           font-size: 44px;
-          line-height: 61px;
+          line-height: 70px;
           font-weight: 400;
           color: #ffffff;
+        }
+        span.total {
+          color: #22292d;
+        }
+        &_reversed {
+          right: 20%;
+          bottom: -12%;
+          text-align: right;
+        }
+      }
+
+      /*Стили втогого item*/
+      &__title {
+        margin-top: -20px;
+        margin-bottom: 28px;
+        font-family: 'Playfair Display';
+        font-size: 44px;
+        line-height: 61px;
+        font-weight: 400;
+        color: #ffffff;
+      }
+      &__description {
+        margin-bottom: 36px;
+        max-width: 635px;
+        font-family: 'Lato';
+        font-size: 22px;
+        line-height: 34px;
+        font-weight: 300;
+        color: #ffffff;
+      }
+      &__button {
+        width: 200px;
+        height: 54px;
+        background-color: #000000;
+        background-image: linear-gradient(55.0deg, #e84b37 25%, #ee7d16 74%);
+        font-family: 'Montserrat Alternates';
+        font-size: 14px;
+        line-height: 32px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+      /*Модификатор*/
+      &_left {
+        align-self: center;
+      }
+    } //end promo-block
+  } //end section-promo-inner
+} //end section-promo
+
+@media(max-width: 1840px) {
+  .section-promo {
+    $promo-blockMarginRight: 50px; /*Обратить внимание при адаптаации*/
+    .section-promo-inner {
+      .promo-block {
+        margin-right: $promo-blockMarginRight;
+      } //end promo-block
+    } //end section-promo-inner
+  } //end section-promo
+} //end media
+
+@media(max-width: 1790px) {
+  .section-promo {
+    $promo-blockMarginRight: 65px; /*Обратить внимание при адаптаации*/
+    $promoBlockItemMarginX: 65px; /*обратить внимание при адаптации*/
+    .section-promo-inner {
+      .promo-block {
+        &__item {
+          &:first-child {
+            margin-right: $promoBlockItemMarginX;
+          }
+          &:last-child {
+            margin-left: $promoBlockItemMarginX;
+          }
+        }
+      } //end promo-block
+    } //end section-promo-inner
+  } //end section-promo
+} //end media
+
+@media(max-width: 1710px) {
+  .section-promo {
+    @mixin flex($jc: flex-start, $ai: flex-start, $fd: row) {
+      display: flex;
+      justify-content: $jc;
+      align-items: $ai;
+      flex-direction: $fd;
+    }
+    $promo-blockMarginRight: 0;
+
+    @mixin promoBlockItemMarginY {
+      margin: 25px 0 150px 0; /*обратить внимание при адаптации*/
+    }
+    $width100: 100%;
+    $promo-blockMarginRight: 0; /*Обратить внимание при адаптаации*/
+    $promoBlockItemMarginX: 0; /*обратить внимание при адаптации*/
+  
+    .section-promo-inner {
+      width: $width100;
+      @include flex(flex-start, center, column); /*Важный код для центрирования*/
+      .promo-block {
+        margin-right: $promo-blockMarginRight;
+        @include flex(flex-start, flex-start, column); /*Важный код для центрирования*/
+        &__item {
+          @include promoBlockItemMarginY;
+          &:first-child {
+            margin-right: $promoBlockItemMarginX;
+          }
+          &:last-child {
+            margin-left: $promoBlockItemMarginX;
+          }
+        }
+        &__item_text-right {
+          order: 1;
+        }
+      } //end promo-block
+    } //end section-promo-inner
+  } //end section-promo
+} //end media
+
+
+@media(max-width: 1100px) {
+  .section-promo {
+
+  
+    .section-promo-inner {
+      .promo-block {
+        &__img1::before {
+          display: none;
+        }
+      } //end promo-block
+    } //end section-promo-inner
+  } //end section-promo
+} //end media
+
+@media(max-width: 950px) {
+  .section-promo {
+    .section-promo-inner {
+      margin: 0 15px;
+      .promo-block {
+        &__img2::after {
+          display: none;
+        }
+        &__title {
+          font-size: 40px;
+          line-height: 50px;
+        }
+      } //end promo-block
+    } //end section-promo-inner
+  } //end section-promo
+} //end media
+
+@media(max-width: 750px) {
+  .section-promo {
+    .section-promo-inner {
+      .promo-block {
+        &__title {
+          margin-top: 0;
+          font-size: 20px;
+          line-height: 25px;
         }
         &__description {
-          margin-bottom: 36px;
-          max-width: 635px;
-          font-family: 'Lato';
-          font-size: 22px;
-          line-height: 34px;
-          font-weight: 300;
-          color: #ffffff;
+          margin-bottom: 26px;
+          font-size: 16px;
+          line-height: normal;
         }
-        &__button  {
-          width: 200px;
-          height: 54px;
-          background-color: #000000;
-          background-image: linear-gradient(55.0deg, #e84b37 25%, #ee7d16 74%);
-          font-family: 'Montserrat Alternates';
-          font-size: 14px;
-          line-height: 32px;
-          font-weight: 400;
-          text-transform: uppercase;
-          color: #ffffff;
+        &__img1::after {
+          display: none;
         }
-      } //end slides
-    } //end truck-slider
-  } //end vertical-inner
-} //end vertical-slider
-
-
+        &__img2 {
+          top: 30%;
+          right: -0;
+          left: 42%;
+          &_reversed {
+            top: 30%;
+            left: 0;
+            right: 42%;
+          }
+        }
+        
+      } //end promo-block
+    } //end section-promo-inner
+  } //end section-promo
+} //end media
 
 
 @import "./header";
