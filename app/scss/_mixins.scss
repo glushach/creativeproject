@@ -1,0 +1,17 @@
+@mixin flex($jc: flex-start, $ai: flex-start, $fd: row, $fw: nowrap) {
+  display: flex;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-direction: $fd;
+  flex-wrap: $fw;
+}
+@mixin sizeImg {
+    img {
+      width: 100%;
+    }
+  }
+
+@mixin animation {
+  animation-name: fade;
+  animation-duration: 2s;
+}

@@ -1,5 +1,6 @@
 @import "./normalize.scss";
 @import "./variables";
+@import "./mixins";
 
 * {
   margin: 0;
@@ -23,10 +24,14 @@ button {
 }
 
 
+
+
+
 @import "./header";
 @import "./hero-slider";
 @import "./btn-block";
 @import "./title-block";
 @import "./section-promo";
+@import "./section-cards";
 
 

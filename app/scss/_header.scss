@@ -136,8 +136,7 @@
         display: none;
         &_active {
           display: block;
-          animation-name: fade;
-          animation-duration: 2s;
+          @include animation;
       }
         .menu {
           height: auto;

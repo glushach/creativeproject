@@ -1486,6 +1486,9 @@ button {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   background: #121619 url("../img/promo-section/bg-img.png") left top no-repeat;
 }
 
@@ -1508,6 +1511,9 @@ button {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
 }
 
 .section-promo .section-promo-inner .promo-block {
@@ -1530,6 +1536,9 @@ button {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   /*Стили втогого item*/
   /*Модификатор*/
 }
@@ -1759,6 +1768,9 @@ button {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
     /*Важный код для центрирования*/
   }
   .section-promo .section-promo-inner .promo-block {
@@ -1780,6 +1792,9 @@ button {
     -webkit-flex-direction: column;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
     /*Важный код для центрирования*/
   }
   .section-promo .section-promo-inner .promo-block__item {
@@ -1871,6 +1886,288 @@ button {
   .section-promo .section-promo-inner .promo-block__count_reversed {
     right: 20%;
     bottom: 3%;
+  }
+}
+
+.section-cards {
+  /*НАЧАЛО КОДА БЛОКА*/
+  padding: 335px 0 178px 0;
+  /*Обратить внимание при адаптации*/
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  background: #121619 url("../img/card-section/bg.png") left 165px no-repeat;
+  /*НАЧАЛО КОДА БЛОКА cards*/
+}
+
+.section-cards__title {
+  margin-bottom: 94px;
+  /*Обратить внимание при адаптации*/
+  font-family: 'Playfair Display';
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.6em;
+  color: #ffffff;
+  position: relative;
+}
+
+.section-cards__title::before {
+  content: '';
+  width: 2px;
+  height: 129px;
+  background-color: #f7941e;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#e84b37), to(#ee7d16));
+  background-image: -webkit-linear-gradient(bottom, #e84b37 0%, #ee7d16 100%);
+  background-image: -o-linear-gradient(bottom, #e84b37 0%, #ee7d16 100%);
+  background-image: linear-gradient(0deg, #e84b37 0%, #ee7d16 100%);
+  position: absolute;
+  left: 50%;
+  top: 31px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  z-index: 10;
+}
+
+.section-cards .cards {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.section-cards .cards__item {
+  width: 520px;
+  /*Обратить внимание при адаптации*/
+  margin: 0 30px 125px 30px;
+  /*Обратить внимание при адаптации*/
+  background: #ffffff;
+  border: 20px solid #121619;
+  position: relative;
+}
+
+.section-cards .cards__item:hover {
+  -webkit-border-image: -webkit-linear-gradient(36deg, #5e00ca 0%, #d5536f 100%);
+       -o-border-image: -o-linear-gradient(36deg, #5e00ca 0%, #d5536f 100%);
+          border-image: linear-gradient(54deg, #5e00ca 0%, #d5536f 100%);
+  border-image-slice: 1;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.section-cards .cards__inner:hover > .cards__link {
+  display: block;
+}
+
+.section-cards .cards__inner:hover + .cards__btn {
+  display: none;
+}
+
+.section-cards .cards__foto img {
+  width: 100%;
+}
+
+.section-cards .cards__title, .section-cards .cards__description, .section-cards .cards__link, .section-cards .cards__btn {
+  position: absolute;
+}
+
+.section-cards .cards__title {
+  width: 100%;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 30px;
+  font-weight: 600;
+  color: #000000;
+  bottom: 20%;
+}
+
+.section-cards .cards__description {
+  width: 100%;
+  padding: 0 50px;
+  /*Обратить внимание при адаптации*/
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 16px;
+  font-weight: 400;
+  color: #000000;
+  bottom: 16.5%;
+  -webkit-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+          transform: translateY(100%);
+  z-index: 3;
+}
+
+.section-cards .cards__link {
+  display: none;
+  width: 120px;
+  /*Обратить внимание при адаптации*/
+  height: 120px;
+  /*Обратить внимание при адаптации*/
+  background: -webkit-linear-gradient(55deg, #e84b37 0%, #ee7d16 100%);
+  background: -o-linear-gradient(55deg, #e84b37 0%, #ee7d16 100%);
+  background: linear-gradient(35deg, #e84b37 0%, #ee7d16 100%);
+  bottom: 0;
+  right: 0;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
+  text-align: right;
+  font-size: 48px;
+  font-family: sans-serif;
+  padding-right: 28px;
+  padding-top: 10px;
+  z-index: 1;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  cursor: pointer;
+}
+
+.section-cards .cards__link a {
+  color: #ffffff;
+}
+
+.section-cards .cards__link::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  bottom: 0;
+  border: 61px solid transparent;
+  /* Прозрачные границы */
+  border-bottom: 61px solid #ffffff;
+  /* Добавляем треугольник */
+}
+
+.section-cards .cards__link::before {
+  content: '';
+  position: absolute;
+  bottom: 50%;
+  -webkit-transform: translateY(50%);
+      -ms-transform: translateY(50%);
+          transform: translateY(50%);
+  left: 0;
+  border: 61px solid transparent;
+  /* Прозрачные границы */
+  border-left: 61px solid #ffffff;
+  /* Добавляем треугольник */
+}
+
+.section-cards .cards__btn {
+  text-align: center;
+  bottom: -27px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.section-cards .cards__btn button {
+  width: 200px;
+  height: 54px;
+  background-color: #000000;
+  background-image: -webkit-linear-gradient(35deg, #e84b37 25%, #ee7d16 74%);
+  background-image: -o-linear-gradient(35deg, #e84b37 25%, #ee7d16 74%);
+  background-image: linear-gradient(55deg, #e84b37 25%, #ee7d16 74%);
+  font-family: 'Montserrat Alternates';
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/*=== Медиа запросы ===*/
+@media (max-width: 1140px) {
+  .section-cards {
+    padding: 150px 0 50px 0;
+    /*Обратить внимание при адаптации*/
+  }
+}
+
+@media (max-width: 991px) {
+  .section-cards {
+    padding: 75px 0 40px 0;
+    /*Обратить внимание при адаптации*/
+    /*НАЧАЛО КОДА БЛОКА cards*/
+  }
+  .section-cards .cards__item {
+    margin: 0 15px 50px 15px;
+    /*Обратить внимание при адаптации*/
+  }
+}
+
+@media (max-width: 575px) {
+  .section-cards {
+    padding: 45px 0 25px 0;
+    /*Обратить внимание при адаптации*/
+    /*НАЧАЛО КОДА БЛОКА cards*/
+  }
+  .section-cards__title {
+    margin-bottom: 94px;
+    /*Обратить внимание при адаптации*/
+    font-size: 16px;
+    letter-spacing: 0.2em;
+  }
+  .section-cards .cards__item {
+    margin: 0 15px 50px 15px;
+    /*Обратить внимание при адаптации*/
+  }
+  .section-cards .cards__title {
+    font-size: 16px;
+  }
+  .section-cards .cards__description {
+    display: none;
+  }
+  .section-cards .cards__btn button {
+    width: 120px;
+    height: 34px;
   }
 }
 /*# sourceMappingURL=style.css.map */

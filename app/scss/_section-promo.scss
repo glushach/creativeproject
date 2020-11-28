@@ -1,19 +1,7 @@
 .section-promo {
-  @mixin flex($jc: flex-start, $ai: flex-start, $fd: row) {
-    display: flex;
-    justify-content: $jc;
-    align-items: $ai;
-    flex-direction: $fd;
-  }
-  @mixin sizeImg {
-      img {
-        width: 100%;
-      }
-    }
   @mixin promoBlockItemMarginY {
     margin: 225px 0 200px 0; /*обратить внимание при адаптации*/
   }
-  $width100: 100%;
   $promo-blockMarginRight: 110px; /*Обратить внимание при адаптаации*/
   $promoBlockItemMarginX: 110px; /*обратить внимание при адаптации*/
 
@@ -193,10 +181,10 @@
     .section-promo-inner {
       .promo-block {
         margin-right: $promo-blockMarginRight;
-      } //end promo-block
-    } //end section-promo-inner
-  } //end section-promo
-} //end media
+      }
+    }
+  }
+}
 
 @media(max-width: 1790px) {
   .section-promo {
@@ -212,25 +200,16 @@
             margin-left: $promoBlockItemMarginX;
           }
         }
-      } //end promo-block
-    } //end section-promo-inner
-  } //end section-promo
-} //end media
+      }
+    }
+  }
+}
 
 @media(max-width: 1710px) {
   .section-promo {
-    @mixin flex($jc: flex-start, $ai: flex-start, $fd: row) {
-      display: flex;
-      justify-content: $jc;
-      align-items: $ai;
-      flex-direction: $fd;
-    }
-    $promo-blockMarginRight: 0;
-
     @mixin promoBlockItemMarginY {
       margin: 25px 0 150px 0; /*обратить внимание при адаптации*/
     }
-    $width100: 100%;
     $promo-blockMarginRight: 0; /*Обратить внимание при адаптаации*/
     $promoBlockItemMarginX: 0; /*обратить внимание при адаптации*/
   
@@ -252,10 +231,10 @@
         &__item_text-right {
           order: 1;
         }
-      } //end promo-block
-    } //end section-promo-inner
-  } //end section-promo
-} //end media
+      }
+    }
+  }
+}
 
 
 @media(max-width: 1100px) {
@@ -265,10 +244,10 @@
         &__img1::before {
           display: none;
         }
-      } //end promo-block
-    } //end section-promo-inner
-  } //end section-promo
-} //end media
+      }
+    }
+  }
+}
 
 @media(max-width: 950px) {
   .section-promo {
@@ -298,10 +277,10 @@
             right: 42%;
           }
         }
-      } //end promo-block
-    } //end section-promo-inner
-  } //end section-promo
-} //end media
+      }
+    }
+  }
+}
 
 @media(max-width: 750px) {
   .section-promo {
