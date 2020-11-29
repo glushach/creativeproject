@@ -1,6 +1,7 @@
 @import "./normalize.scss";
 @import "./variables";
 @import "./mixins";
+@import "./dots";
 
 * {
   margin: 0;
@@ -24,7 +25,93 @@ button {
 }
 
 
+.services-section {
+  &__title {
+    font-family: 'Playfair Display';
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6em; /*Обратить внимание при адаптации*/
+    color: #ac378e;
+    text-align: center;
+    margin-bottom: 14px; /*Обратить внимание при адаптации*/
+  }
+  &__title-main {
+    font-family: 'Playfair Display';
+    font-size: 70px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #ffffff;
+    color: red;
+    text-align: center;
+    margin-bottom: 32px; /*Обратить внимание при адаптации*/
+  }
 
+  /*Начало блока с табами*/
+  .tabs {
+    @include flex(center);
+    &__item {
+      border-right: 1px solid red;
+      transform: skewX(-20deg);
+      div {
+        margin-left: 20px; /*Обратить внимание при адаптации*/
+        margin-right: 11px; /*Обратить внимание при адаптации*/
+        transform: skewX(20deg);
+        font-family: 'Playfair Display';
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.6em; /*Обратить внимание при адаптации*/
+        color: #ffffff;
+        color: red;
+        cursor: pointer;
+        transition: 1s all;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+      &_active {
+        display: block;
+      }
+    }
+    
+    &__item:last-child {
+      border-right: none;
+    }
+  } //end tabs
+
+  /*Начало контентного блока*/
+  .contents {
+    &__btn {
+      width: 260px; /*Обратить внимание при адаптации*/
+      height: 54px; /*Обратить внимание при адаптации*/
+      line-height: 54px; /*Обратить внимание при адаптации*/
+      background-color: #000000;
+      background-image: linear-gradient(90.0deg, #5e00ca 0%, #d5536f 100%);
+      margin: 64px auto 124px auto;
+      text-align: center;
+      a {
+        font-family: 'Montserrat Alternates';
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: uppercase;
+        letter-spacing: 0.2em; /*Обратить внимание при адаптации*/
+        color: #ffffff;
+      }
+    }
+
+    /*НАЧАЛО СЛАЙДЕРА*/
+    .slider {
+      max-width: 1545px; /*Обратить внимание при адаптации*/
+      margin: 0 auto;
+      border-top: 1px solid red;
+      
+    } //end slider
+    &_active {
+      display: block;
+    }
+  } //end contents
+} //end services-section
 
 
 @import "./header";

@@ -1,0 +1,44 @@
+.dots {
+  display: flex;
+  justify-content: space-between;
+  width: 113px;
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25px;
+    height: 25px;
+    border: 2px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .5s all;
+  }
+  &__item:hover {
+    transform: scale(1.2);
+  }
+  
+  &__inner {
+    width: 5px;
+    height: 5px;
+    background: #48555d;
+    border-radius: 50%;
+  }
+  &__single, &__multiple {
+    &_active {
+      border: 2px solid #ed751b;
+    }
+  }
+  &__singular, &__plural {
+    &_active {
+      background: #ed751b;
+    }
+  }
+  /*Модификаторы*/
+  &_position {
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+  
+  }
+}

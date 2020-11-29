@@ -18,9 +18,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-  const dotBlockItem = document.querySelectorAll('.dot-block__item'),
-        dotBlockInner = document.querySelectorAll('.dot-block__inner'),
-        dotBlock = document.querySelectorAll('.dot-block')[0],
+  const singleTrigger = document.querySelectorAll('.dots__single'),
+        dotsSingular = document.querySelectorAll('.dots__singular'),
+        dotsSingle = document.querySelectorAll('#single')[0],
         slide = document.querySelectorAll('.slide'),
         leftBtn = document.querySelector('.button-block__left'),
         rightBtn = document.querySelector('.button-block__right');
@@ -40,16 +40,16 @@ window.addEventListener('DOMContentLoaded', () => {
       }
 
 
-      for(let i = 0; i < dotBlockItem.length; i++) {
-        dotBlockItem[i].classList.remove('dot-block__item_active');
+      for(let i = 0; i < singleTrigger.length; i++) {
+        singleTrigger[i].classList.remove('dots__single_active');
       }
-      for(let i = 0; i < dotBlockInner.length; i++) {
-        dotBlockInner[i].classList.remove('dot-block__inner_active');
+      for(let i = 0; i < dotsSingular.length; i++) {
+        dotsSingular[i].classList.remove('dots__singular_active');
       }
 
       slide[slideIndex - 1].style.display = 'block';
-      dotBlockItem[slideIndex - 1].classList.add('dot-block__item_active');
-      dotBlockInner[slideIndex - 1].classList.add('dot-block__inner_active');
+      singleTrigger[slideIndex - 1].classList.add('dots__single_active');
+      dotsSingular[slideIndex - 1].classList.add('dots__singular_active');
     }//end fn showSlides
 
 /*С этого момента слайды должны по нажатию на треггеры менятся*/
@@ -72,14 +72,14 @@ window.addEventListener('DOMContentLoaded', () => {
       rightBtn.classList.add('button-block_active');
     });
 
-    dotBlock.addEventListener('click', (e) => {
-      for(let i = 0; i < dotBlockItem.length + 1; i++) {
-        if(e.target.classList.contains('dot-block__item') && e.target == dotBlockItem[i - 1]){
+    dotsSingle.addEventListener('click', (e) => {
+      for(let i = 0; i < singleTrigger.length + 1; i++) {
+        if(e.target.classList.contains('dots__item') && e.target == singleTrigger[i - 1]){
           currentSlide(i);
         }
       }
-      for(let i = 0; i < dotBlockInner.length + 1; i++) {
-        if(e.target.classList.contains('dot-block__inner') && e.target == dotBlockInner[i - 1]){
+      for(let i = 0; i < dotsSingular.length + 1; i++) {
+        if(e.target.classList.contains('dots__inner') && e.target == dotsSingular[i - 1]){
           currentSlide(i);
         }
       }

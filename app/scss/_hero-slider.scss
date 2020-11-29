@@ -116,41 +116,8 @@
   .button-block_active {
     color: #5e00ca;
   }
-  .dot-block {
-    display: flex;
-    justify-content: space-between;
-    width: 113px;
-    position:absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
-    &__item {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 25px;
-      height: 25px;
-      border: 2px solid transparent;
-      border-radius: 50%;
-      cursor: pointer;
-      transition: .5s all;
-    }
-    &__item:hover {
-      transform: scale(1.2);
-    }
-    &__item_active {
-      border: 2px solid #ed751b;
-    }
-    &__inner{
-      width: 5px;
-      height: 5px;
-      background: #48555d;
-      border-radius: 50%;
-    }
-    &__inner_active {
-      background: #ed751b;
-    }
-  }
+/*Сдесь были dots*/
+
   /*Slide modify*/
   .slide__description_red {
     color: red;
