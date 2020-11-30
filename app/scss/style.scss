@@ -1,6 +1,7 @@
 @import "./normalize.scss";
 @import "./variables";
 @import "./mixins";
+@import "./tabs";
 @import "./dots";
 
 * {
@@ -25,347 +26,99 @@ button {
 }
 
 
-.services-section {
-  padding-top: 24px; /*Обратить внимание при адаптации*/
-  background: $BackgroundSectionServices url('../img/services-section/bg.png') left (bottom) no-repeat;
-  &__title {
-    font-family: 'Playfair Display';
-    font-size: 14px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.6em; /*Обратить внимание при адаптации*/
-    color: #ac378e;
-    text-align: center;
-    margin-bottom: 14px; /*Обратить внимание при адаптации*/
-  }
-  &__title-main {
-    font-family: 'Playfair Display';
-    font-size: 70px;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: #ffffff;
-    text-align: center;
-    margin-bottom: 32px; /*Обратить внимание при адаптации*/
-  }
-
-  /*Начало блока с табами*/
-  .tabs {
-    @include flex(center);
-    &__item {
-      border-right: 1px solid #ffffff;
-      transform: skewX(-20deg);
-      div {
-        margin-left: 20px; /*Обратить внимание при адаптации*/
-        margin-right: 11px; /*Обратить внимание при адаптации*/
-        transform: skewX(20deg);
-        font-family: 'Playfair Display';
-        font-size: 14px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.6em; /*Обратить внимание при адаптации*/
-        
-        cursor: pointer;
-        transition: 1s all;
-        &:hover {
-          transform: scale(1.1);
-        }
-      }
-    }
-    
-    &__item:last-child {
-      border-right: none;
-    }
-
-    &__click {
-      color: #ffffff;
+.slider {
+  max-width: 1596px; /*Обратить внимание при написании кода JS*/
+  margin: 0 auto;
+  padding-bottom: 4px;
+  overflow: hidden;
+  .slides {
+    width: 2258px;
+    margin-bottom: 65px;
+    @include flex();
+    &__inner {
+      width: 512px;
+      min-height: 380px;
+      margin-right: 30px;
+      padding: 40px 55px 0 50px;
+      border-right: 1px solid red;
       &_active {
-        color: #ac378e;
+        background-color: #372b73;
+        background-image: linear-gradient(36.0deg, #5e00ca 11%, #d5536f 88%);
       }
     }
-  } //end tabs
-
-  /*Начало контентного блока*/
-  .contents {
-    &_show {
-      display: block;
-      @include animation;
+    &__inner:last-child {
+      margin-right: 0;
     }
-    &_hide {
-      display: none;
+    &__icon {
+      width: 72px;
+      height: 65px;
+      margin-bottom: 25px;
+      @include sizeImg;
     }
-    &__btn {
-      width: 260px; /*Обратить внимание при адаптации*/
-      height: 54px; /*Обратить внимание при адаптации*/
-      line-height: 54px; /*Обратить внимание при адаптации*/
-      background-color: #000000;
-      background-image: linear-gradient(90.0deg, #5e00ca 0%, #d5536f 100%);
-      margin: 64px auto 124px auto;
-      text-align: center;
-      a {
-        font-family: 'Montserrat Alternates';
-        font-size: 14px;
-        font-weight: 400;
-        text-transform: uppercase;
-        letter-spacing: 0.2em; /*Обратить внимание при адаптации*/
-        color: #ffffff;
-      }
-      &_red {
-        background-color: red;
-        background-image: none;
-      }
-      &_tomato {
-        background-color: tomato;
-        background-image: none;
-      }
-      &_green {
-        background-color: green;
-        background-image: none;
-      }
-      &_blue {
-        background-color: blue;
-        background-image: none;
-      }
-    }
-
-    /*НАЧАЛО СЛАЙДЕРА*/
-    .slider {
-      max-width: 1596px; /*Обратить внимание при адаптации*/ /*Обратить внимание при написании кода JS*/
-      margin: 0 auto;
-      padding-bottom: 4px;
-      overflow: hidden;
-      .slides {
-        width: 2258px; /*Обратить внимание при адаптации*/
-        margin-bottom: 65px;
-        @include flex();
-        &__inner {
-          width: 512px;
-          min-height: 380px;
-          margin-right: 30px; /*Обратить внимание при адаптации*/
-          padding: 40px 55px 0 50px;
-          border-right: 1px solid red;
-          &_active {
-            background-color: #372b73;
-            background-image: linear-gradient(36.0deg, #5e00ca 11%, #d5536f 88%);
-          }
-        }
-        &__inner:last-child {
-          margin-right: 0;
-        }
-        &__icon {
-          width: 72px;
-          height: 65px;
-          margin-bottom: 25px;
-          @include sizeImg;
-        }
-        &__title {
-          font-family: 'Lato';
-          font-size: 30px;
-          font-weight: 400;
-          color: #ffffff;
-          margin-bottom: 30px;
-        }
-        &__description {
-          font-family: 'Lato';
-          font-size: 18px;
-          line-height: 32px;
-          font-weight: 300;
-          color: #ffffff;
-        }
-      }
-    } //end slider
-
-    /*Начало ссылки*/
-    &__email {
-      margin-top: 500px; /*Обратить внимание при адаптации*/
-    }
-    &__description, &__link {
-      font-family: 'Playfair Display';
-      font-size: 70px;
-      line-height: 95px;
+    &__title {
+      font-family: 'Lato';
+      font-size: 30px;
       font-weight: 400;
       color: #ffffff;
-      text-align: center;
+      margin-bottom: 30px;
     }
-    &__link > a {
+    &__description {
+      font-family: 'Lato';
+      font-size: 18px;
+      line-height: 32px;
+      font-weight: 300;
       color: #ffffff;
-      border-bottom: 2px solid #ac378e;
-      span {
-        color: #a53689;
-      }
     }
-  } //end contents
-} //end services-section
+  }
+}
 
 /*МЕДИА ЗАПРОСЫ*/
 @media(max-width: 1640px) {
-  .services-section {
-    .contents {
-      .slider {
-        max-width: 1054px; /*Обратить внимание при написании кода JS*/
-      } //end slider
-    } //end contents
-  } //end services-section
-} //end media
-
-@media(max-width: 1380px) {
-  .services-section {
-    &__title-main {
-      font-size: 50px;
-    }
-    .contents {
-      &__email {
-        margin-top: 300px;
-      }
-      &__description, &__link {
-        font-size: 50px;
-        line-height: 87px;
-      }
-    } //end contents
-  } //end services-section
-} //end media
+  .slider {
+    max-width: 1054px; /*Обратить внимание при написании кода JS*/
+  }
+}
 
 @media(max-width: 1100px) {
-  .services-section {
-    .contents {
-      &__btn {
-        margin: 50px auto 80px auto;
-      }
-    }
-    &__title-main {
-      font-size: 43px;
-    }
-    .contents {
-      .slider {
-        max-width: 512px; /*Обратить внимание при написании кода JS*/
-      } //end slider
-      &__email {
-        margin-top: 150px;
-      }
-      &__description, &__link {
-        font-size: 40px;
-        line-height: 70px;
-      }
-    } //end contents
-  } //end services-section
-} //end media
-
-@media(max-width: 991px) {
-  .services-section {
-    &__title-main {
-      font-size: 35px;
-    }
-    .tabs {
-      @include flex(flex-start, center, column);
-      &__item {
-        border-right: none;
-        margin-bottom: 10px;
-      }
-    } //end tabs
-    .contents {
-      &__email {
-        margin-top: 100px;
-      }
-    } //end contents
-  } //end services-section
-} //end media
+  .slider {
+    max-width: 512px; /*Обратить внимание при написании кода JS*/
+  }
+}
 
 @media(max-width: 767px) {
-  .services-section {
-    &__title {
-      letter-spacing: 0.4em; /*Обратить внимание при адаптации*/
-      margin-bottom: 8px; /*Обратить внимание при адаптации*/
+  .slider {
+    .slides {
+      margin-bottom: 45px;
+      &__inner {
+        min-height: 360px;
+      }
     }
-    &__title-main {
-      font-size: 25px;
-      margin-bottom: 25px;
-    }
-    .contents {
-      &__btn {
-        width: 200px;
-        margin: 35px auto 50px auto;
-        a {
-          letter-spacing: normal; /*Обратить внимание при адаптации*/
-        }
-      }
-      .slider {
-        .slides {
-          margin-bottom: 45px;
-          &__inner {
-            min-height: 360px;
-          }
-        }
-
-      } //end slider
-      &__email {
-        margin-top: 70px;
-      }
-      &__description, &__link {
-        font-size: 30px;
-        line-height: 60px;
-      }
-    } //end contents
-  } //end services-section
-} //end media
+  }
+}
 
 @media(max-width: 575px) {
-  .services-section {
-    padding: 0 15px;
-    &__title {
-      letter-spacing: 0.2em; /*Обратить внимание при адаптации*/
-    }
-    &__title-main {
-      font-size: 20px;
-      line-height: 30px;
-      margin-bottom: 20px;
-    }
-    .tabs {
-      &__item {
-        
-        border-right: none;
-        margin-bottom: 10px;
-        div {
-          letter-spacing: 0.4em;
-        }
+  .slider {
+    max-width: 290px;
+    .slides {
+      margin-bottom: 45px;
+      &__inner {
+        width: 290px;
+        padding: 20px 0 0 10px;
       }
-    } //end tabs
-    .contents {
-      &__btn {
-        margin: 25px auto 35px auto;
-        height: 45px;
-        line-height: 45px;
-        a {
-          letter-spacing: normal;
-        }
+      &__description {
+        font-size: 16px;
       }
-      .slider {
-        max-width: 290px; /*Обратить внимание при написании кода JS*/
-        .slides {
-          margin-bottom: 45px;
-          &__inner {
-            width: 290px;
-            padding: 20px 0 0 10px;
-          }
-          &__description {
-            font-size: 16px;
-          }
-        }
+    }
+  }
+}
 
-      } //end slider
-      &__email {
-        margin-top: 50px;
-      }
-      &__description, &__link {
-        font-size: 15px;
-        line-height: 40px;
-      }
-    } //end contents
-  } //end services-section
-} //end media
+
 @import "./header";
 @import "./hero-slider";
 @import "./btn-block";
 @import "./title-block";
 @import "./section-promo";
 @import "./section-cards";
+@import "./section-services";
 
 

@@ -1,0 +1,96 @@
+  .tabs {
+    @include flex(center);
+    &__item {
+      border-right: 1px solid #ffffff;
+      transform: skewX(-20deg);
+      div {
+        margin-left: 20px; /*Обратить внимание при адаптации*/
+        margin-right: 11px; /*Обратить внимание при адаптации*/
+        transform: skewX(20deg);
+        font-family: 'Playfair Display';
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.6em; /*Обратить внимание при адаптации*/
+        
+        cursor: pointer;
+        transition: 1s all;
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
+    }
+    
+    &__item:last-child {
+      border-right: none;
+    }
+
+    &__click {
+      color: #ffffff;
+      &_active {
+        color: #ac378e;
+      }
+    }
+  }
+
+  
+  @media(max-width: 991px) {
+      .tabs {
+        @include flex(flex-start, center, column);
+        &__item {
+          border-right: none;
+          margin-bottom: 10px;
+        }
+      }
+  }
+
+  @media(max-width: 767px) {
+    .services-section {
+      &__title {
+        letter-spacing: 0.4em; /*Обратить внимание при адаптации*/
+        margin-bottom: 8px; /*Обратить внимание при адаптации*/
+      }
+      &__title-main {
+        font-size: 25px;
+        margin-bottom: 25px;
+      }
+      .contents {
+        &__btn {
+          width: 200px;
+          margin: 35px auto 50px auto;
+          a {
+            letter-spacing: normal; /*Обратить внимание при адаптации*/
+          }
+        }
+        .slider {
+          .slides {
+            margin-bottom: 45px;
+            &__inner {
+              min-height: 360px;
+            }
+          }
+  
+        } //end slider
+        &__email {
+          margin-top: 70px;
+        }
+        &__description, &__link {
+          font-size: 30px;
+          line-height: 60px;
+        }
+      } //end contents
+    } //end services-section
+  } //end media
+  
+  @media(max-width: 575px) {
+      .tabs {
+        &__item {
+          
+          border-right: none;
+          margin-bottom: 10px;
+          div {
+            letter-spacing: 0.4em;
+          }
+        }
+      }
+  }
