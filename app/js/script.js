@@ -84,4 +84,48 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       }
     });//end event
+
+
+
+  const tabs = document.querySelectorAll('.tabs__click'),
+        contents = document.querySelectorAll('.contents'),
+        tabsParent = document.querySelector('.tabs');
+
+  function hideTabContent() {
+    contents.forEach(item => {
+      item.classList.add('contents_hide');
+      item.classList.remove('contents_show');
+    });
+
+    tabs.forEach(item => {
+      item.classList.remove('tabs__click_active');
+    });
+  }
+
+  function showTabContent(i = 0) {
+    contents[i].classList.add('contents_show');
+    contents[i].classList.remove('contents_hide');
+    tabs[i].classList.add('tabs__click_active');
+  }
+
+  hideTabContent();
+  showTabContent();
+
+  tabsParent.addEventListener('click', (event) => {
+    const target = event.target;
+
+    // console.log(target);
+    // console.log(target.classList.contains('tabs__click'));
+
+    if(target && target.classList.contains('tabs__click')) {
+      tabs.forEach((item, index) => {
+        if(target == item) {
+          hideTabContent();
+          showTabContent(index);
+        }
+      });
+    }
+  });
+
+
 });

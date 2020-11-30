@@ -2,6 +2,7 @@
   display: flex;
   justify-content: space-between;
   width: 113px;
+  margin: 0 auto;
   &__item {
     display: flex;
     justify-content: center;
@@ -27,6 +28,9 @@
     &_active {
       border: 2px solid #ed751b;
     }
+  }
+  &__plural {
+    background: #ffffff;
   }
   &__singular, &__plural {
     &_active {

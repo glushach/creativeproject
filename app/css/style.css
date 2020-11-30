@@ -370,6 +370,7 @@ template {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 113px;
+  margin: 0 auto;
   /*Модификаторы*/
 }
 
@@ -415,6 +416,10 @@ template {
   border: 2px solid #ed751b;
 }
 
+.dots__plural {
+  background: #ffffff;
+}
+
 .dots__singular_active, .dots__plural_active {
   background: #ed751b;
 }
@@ -455,6 +460,9 @@ button {
 }
 
 .services-section {
+  padding-top: 24px;
+  /*Обратить внимание при адаптации*/
+  background: #121619 url("../img/services-section/bg.png") left bottom no-repeat;
   /*Начало блока с табами*/
   /*Начало контентного блока*/
 }
@@ -478,7 +486,6 @@ button {
   font-weight: 400;
   text-transform: uppercase;
   color: #ffffff;
-  color: red;
   text-align: center;
   margin-bottom: 32px;
   /*Обратить внимание при адаптации*/
@@ -508,7 +515,7 @@ button {
 }
 
 .services-section .tabs__item {
-  border-right: 1px solid red;
+  border-right: 1px solid #ffffff;
   -webkit-transform: skewX(-20deg);
       -ms-transform: skewX(-20deg);
           transform: skewX(-20deg);
@@ -528,8 +535,6 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.6em;
   /*Обратить внимание при адаптации*/
-  color: #ffffff;
-  color: red;
   cursor: pointer;
   -webkit-transition: 1s all;
   -o-transition: 1s all;
@@ -542,16 +547,33 @@ button {
           transform: scale(1.1);
 }
 
-.services-section .tabs__item_active {
-  display: block;
-}
-
 .services-section .tabs__item:last-child {
   border-right: none;
 }
 
+.services-section .tabs__click {
+  color: #ffffff;
+}
+
+.services-section .tabs__click_active {
+  color: #ac378e;
+}
+
 .services-section .contents {
   /*НАЧАЛО СЛАЙДЕРА*/
+  /*Начало ссылки*/
+}
+
+.services-section .contents_show {
+  display: block;
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+.services-section .contents_hide {
+  display: none;
 }
 
 .services-section .contents__btn {
@@ -580,15 +602,289 @@ button {
   color: #ffffff;
 }
 
-.services-section .contents .slider {
-  max-width: 1545px;
-  /*Обратить внимание при адаптации*/
-  margin: 0 auto;
-  border-top: 1px solid red;
+.services-section .contents__btn_red {
+  background-color: red;
+  background-image: none;
 }
 
-.services-section .contents_active {
-  display: block;
+.services-section .contents__btn_tomato {
+  background-color: tomato;
+  background-image: none;
+}
+
+.services-section .contents__btn_green {
+  background-color: green;
+  background-image: none;
+}
+
+.services-section .contents__btn_blue {
+  background-color: blue;
+  background-image: none;
+}
+
+.services-section .contents .slider {
+  max-width: 1596px;
+  /*Обратить внимание при адаптации*/
+  /*Обратить внимание при написании кода JS*/
+  margin: 0 auto;
+  padding-bottom: 4px;
+  overflow: hidden;
+}
+
+.services-section .contents .slider .slides {
+  width: 2258px;
+  /*Обратить внимание при адаптации*/
+  margin-bottom: 65px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+}
+
+.services-section .contents .slider .slides__inner {
+  width: 512px;
+  min-height: 380px;
+  margin-right: 30px;
+  /*Обратить внимание при адаптации*/
+  padding: 40px 55px 0 50px;
+  border-right: 1px solid red;
+}
+
+.services-section .contents .slider .slides__inner_active {
+  background-color: #372b73;
+  background-image: -webkit-linear-gradient(54deg, #5e00ca 11%, #d5536f 88%);
+  background-image: -o-linear-gradient(54deg, #5e00ca 11%, #d5536f 88%);
+  background-image: linear-gradient(36deg, #5e00ca 11%, #d5536f 88%);
+}
+
+.services-section .contents .slider .slides__inner:last-child {
+  margin-right: 0;
+}
+
+.services-section .contents .slider .slides__icon {
+  width: 72px;
+  height: 65px;
+  margin-bottom: 25px;
+}
+
+.services-section .contents .slider .slides__icon img {
+  width: 100%;
+}
+
+.services-section .contents .slider .slides__title {
+  font-family: 'Lato';
+  font-size: 30px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.services-section .contents .slider .slides__description {
+  font-family: 'Lato';
+  font-size: 18px;
+  line-height: 32px;
+  font-weight: 300;
+  color: #ffffff;
+}
+
+.services-section .contents__email {
+  margin-top: 500px;
+  /*Обратить внимание при адаптации*/
+}
+
+.services-section .contents__description, .services-section .contents__link {
+  font-family: 'Playfair Display';
+  font-size: 70px;
+  line-height: 95px;
+  font-weight: 400;
+  color: #ffffff;
+  text-align: center;
+}
+
+.services-section .contents__link > a {
+  color: #ffffff;
+  border-bottom: 2px solid #ac378e;
+}
+
+.services-section .contents__link > a span {
+  color: #a53689;
+}
+
+/*МЕДИА ЗАПРОСЫ*/
+@media (max-width: 1640px) {
+  .services-section .contents .slider {
+    max-width: 1054px;
+    /*Обратить внимание при написании кода JS*/
+  }
+}
+
+@media (max-width: 1380px) {
+  .services-section__title-main {
+    font-size: 50px;
+  }
+  .services-section .contents__email {
+    margin-top: 300px;
+  }
+  .services-section .contents__description, .services-section .contents__link {
+    font-size: 50px;
+    line-height: 87px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .services-section .contents__btn {
+    margin: 50px auto 80px auto;
+  }
+  .services-section__title-main {
+    font-size: 43px;
+  }
+  .services-section .contents .slider {
+    max-width: 512px;
+    /*Обратить внимание при написании кода JS*/
+  }
+  .services-section .contents__email {
+    margin-top: 150px;
+  }
+  .services-section .contents__description, .services-section .contents__link {
+    font-size: 40px;
+    line-height: 70px;
+  }
+}
+
+@media (max-width: 991px) {
+  .services-section__title-main {
+    font-size: 35px;
+  }
+  .services-section .tabs {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+  }
+  .services-section .tabs__item {
+    border-right: none;
+    margin-bottom: 10px;
+  }
+  .services-section .contents__email {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .services-section__title {
+    letter-spacing: 0.4em;
+    /*Обратить внимание при адаптации*/
+    margin-bottom: 8px;
+    /*Обратить внимание при адаптации*/
+  }
+  .services-section__title-main {
+    font-size: 25px;
+    margin-bottom: 25px;
+  }
+  .services-section .contents__btn {
+    width: 200px;
+    margin: 35px auto 50px auto;
+  }
+  .services-section .contents__btn a {
+    letter-spacing: normal;
+    /*Обратить внимание при адаптации*/
+  }
+  .services-section .contents .slider .slides {
+    margin-bottom: 45px;
+  }
+  .services-section .contents .slider .slides__inner {
+    min-height: 360px;
+  }
+  .services-section .contents__email {
+    margin-top: 70px;
+  }
+  .services-section .contents__description, .services-section .contents__link {
+    font-size: 30px;
+    line-height: 60px;
+  }
+}
+
+@media (max-width: 575px) {
+  .services-section {
+    padding: 0 15px;
+  }
+  .services-section__title {
+    letter-spacing: 0.2em;
+    /*Обратить внимание при адаптации*/
+  }
+  .services-section__title-main {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+  .services-section .tabs__item {
+    border-right: none;
+    margin-bottom: 10px;
+  }
+  .services-section .tabs__item div {
+    letter-spacing: 0.4em;
+  }
+  .services-section .contents__btn {
+    margin: 25px auto 35px auto;
+    height: 45px;
+    line-height: 45px;
+  }
+  .services-section .contents__btn a {
+    letter-spacing: normal;
+  }
+  .services-section .contents .slider {
+    max-width: 290px;
+    /*Обратить внимание при написании кода JS*/
+  }
+  .services-section .contents .slider .slides {
+    margin-bottom: 45px;
+  }
+  .services-section .contents .slider .slides__inner {
+    width: 290px;
+    padding: 20px 0 0 10px;
+  }
+  .services-section .contents .slider .slides__description {
+    font-size: 16px;
+  }
+  .services-section .contents__email {
+    margin-top: 50px;
+  }
+  .services-section .contents__description, .services-section .contents__link {
+    font-size: 15px;
+    line-height: 40px;
+  }
 }
 
 .header-inner {
@@ -786,8 +1082,8 @@ button {
     display: block;
     -webkit-animation-name: fade;
             animation-name: fade;
-    -webkit-animation-duration: 2s;
-            animation-duration: 2s;
+    -webkit-animation-duration: 1.5s;
+            animation-duration: 1.5s;
   }
   .header-inner .nav-block .nav .menu {
     height: auto;
@@ -2131,8 +2427,8 @@ button {
   border-image-slice: 1;
   -webkit-animation-name: fade;
           animation-name: fade;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
 }
 
 .section-cards .cards__inner:hover > .cards__link {
@@ -2199,8 +2495,8 @@ button {
   z-index: 1;
   -webkit-animation-name: fade;
           animation-name: fade;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
   cursor: pointer;
 }
 
@@ -2245,8 +2541,8 @@ button {
           transform: translateX(-50%);
   -webkit-animation-name: fade;
           animation-name: fade;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
   width: 200px;
   height: 54px;
   line-height: 54px;
