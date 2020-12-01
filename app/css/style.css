@@ -600,6 +600,10 @@ button {
   outline: none;
 }
 
+body {
+  background: #121619;
+}
+
 .swiper-container {
   max-width: 1596px;
   /*Обратить внимание при написании кода JS*/
@@ -1423,7 +1427,7 @@ button {
   }
 }
 
-.buttom-wrapper {
+.button-wrapper {
   background: #121619;
   min-height: 525px;
   display: -webkit-box;
@@ -1440,7 +1444,7 @@ button {
           align-items: center;
 }
 
-.buttom-wrapper .vawe-100 {
+.button-wrapper .vawe-100 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1460,7 +1464,7 @@ button {
           border-radius: 50%;
 }
 
-.buttom-wrapper .wave-75 {
+.button-wrapper .wave-75 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1482,7 +1486,7 @@ button {
           animation: wave-75 linear 1s infinite;
 }
 
-.buttom-wrapper .wave-50 {
+.button-wrapper .wave-50 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1504,7 +1508,7 @@ button {
           animation: wave-50 linear 1s infinite;
 }
 
-.buttom-wrapper .wave-25 {
+.button-wrapper .wave-25 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1526,7 +1530,7 @@ button {
           animation: wave-25 linear 1s infinite;
 }
 
-.buttom-wrapper .wave-0 {
+.button-wrapper .wave-0 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1547,13 +1551,13 @@ button {
   cursor: pointer;
 }
 
-.buttom-wrapper .wave-0__link {
+.button-wrapper .wave-0__link {
   display: block;
   width: 160px;
   height: 160px;
 }
 
-.buttom-wrapper .wave-0__link img {
+.button-wrapper .wave-0__link img {
   width: 100%;
   height: 100%;
   -webkit-transition: .3s;
@@ -1683,30 +1687,30 @@ button {
 
 /*=========МЕДИА ЗАПРОСЫ=========*/
 @media (max-width: 575px) {
-  .buttom-wrapper {
+  .button-wrapper {
     min-height: 350px;
   }
-  .buttom-wrapper .vawe-100 {
+  .button-wrapper .vawe-100 {
     width: 300px;
     height: 300px;
   }
-  .buttom-wrapper .wave-75 {
+  .button-wrapper .wave-75 {
     width: 240px;
     height: 240px;
   }
-  .buttom-wrapper .wave-50 {
+  .button-wrapper .wave-50 {
     width: 170px;
     height: 170px;
   }
-  .buttom-wrapper .wave-25 {
+  .button-wrapper .wave-25 {
     width: 105px;
     height: 105px;
   }
-  .buttom-wrapper .wave-0 {
+  .button-wrapper .wave-0 {
     width: 65px;
     height: 65px;
   }
-  .buttom-wrapper .wave-0__link {
+  .button-wrapper .wave-0__link {
     width: 55px;
     height: 55px;
   }
@@ -1744,6 +1748,7 @@ button {
 }
 
 .title-block .signature-mt {
+  margin: 0 15px;
   margin-top: 22px;
   width: 130px;
   height: 96px;
@@ -1754,7 +1759,7 @@ button {
     min-height: 415px;
   }
   .title-block .main-title {
-    font-size: 50px;
+    font-size: 45px;
   }
 }
 
@@ -1926,6 +1931,8 @@ button {
   top: 30%;
   left: 100%;
   text-align: left;
+  padding-right: 0;
+  /*ОТСУТСТВИЕ АНУЛЯЦИИ ЭТОГО ПАДДИНГА ДАЛО ДИСПРОПОРЦИЮ*/
   padding-left: 31px;
 }
 
@@ -2128,21 +2135,19 @@ button {
 }
 
 @media (max-width: 1100px) {
-  .section-promo .section-promo-inner .promo-block__img1::before {
-    display: none;
+  .section-promo .section-promo-inner {
+    max-width: 550px;
+    /*ОБРАТИТЬ ВНИМАНИЕ ПРИ АДАПТАЦИИ*/
+  }
+  .section-promo .section-promo-inner .promo-block__title {
+    font-size: 35px;
   }
 }
 
 @media (max-width: 950px) {
-  .section-promo .section-promo-inner {
-    margin: 0 15px;
-  }
   .section-promo .section-promo-inner .promo-block__item {
     margin: 25px 0 140px 0;
     /*обратить внимание при адаптации*/
-  }
-  .section-promo .section-promo-inner .promo-block__img2::after {
-    display: none;
   }
   .section-promo .section-promo-inner .promo-block__title {
     font-size: 40px;
@@ -2150,7 +2155,7 @@ button {
   }
   .section-promo .section-promo-inner .promo-block__img2 {
     top: 30%;
-    right: -7;
+    right: -7%;
     left: 42%;
   }
   .section-promo .section-promo-inner .promo-block__img2_reversed {
@@ -2160,33 +2165,74 @@ button {
   }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 870px) {
+  .section-promo .section-promo-inner {
+    max-width: 450px;
+    /*ОБРАТИТЬ ВНИМАНИЕ ПРИ АДАПТАЦИИ*/
+  }
+  .section-promo .section-promo-inner .promo-block {
+    /*ПСЕВДОКЛАССЫ*/
+  }
+  .section-promo .section-promo-inner .promo-block__title {
+    margin-top: 0;
+    font-size: 27px;
+    line-height: 40px;
+  }
+  .section-promo .section-promo-inner .promo-block__description {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .section-promo .section-promo-inner .promo-block__count {
+    left: 14%;
+    bottom: -10%;
+  }
+  .section-promo .section-promo-inner .promo-block .promo-block__count_reversed {
+    right: 14%;
+  }
+  .section-promo .section-promo-inner .promo-block__img1::before {
+    left: -20%;
+    background-color: red;
+    height: 153px;
+    /*обратить внимание при адаптации*/
+    padding-right: 10px;
+    padding-top: 12px;
+    font-size: 35px;
+  }
+  .section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::before {
+    background-color: green;
+    padding-top: 12px;
+    padding-left: 10px;
+    font-size: 35px;
+  }
+  .section-promo .section-promo-inner .promo-block__img1::after {
+    height: 165px;
+    /*обратить внимание при адаптации*/
+  }
+  .section-promo .section-promo-inner .promo-block__img2::after {
+    height: 165px;
+    /*обратить внимание при адаптации*/
+  }
+}
+
+@media (max-width: 790px) {
+  .section-promo .section-promo-inner {
+    max-width: 435px;
+    /*Обратить при адаптации*/
+  }
+  .section-promo .section-promo-inner .promo-block {
+    /*ПСЕВДОКЛАССЫ*/
+  }
   .section-promo .section-promo-inner .promo-block__item {
     margin: 25px 0 50px 0;
     /*обратить внимание при адаптации*/
   }
   .section-promo .section-promo-inner .promo-block__title {
-    margin-top: 0;
-    font-size: 20px;
-    line-height: 25px;
+    font-size: 25px;
   }
   .section-promo .section-promo-inner .promo-block__description {
     margin-bottom: 26px;
     font-size: 16px;
     line-height: normal;
-  }
-  .section-promo .section-promo-inner .promo-block__img1::after {
-    display: none;
-  }
-  .section-promo .section-promo-inner .promo-block__img2 {
-    top: 30%;
-    right: 0;
-    left: 42%;
-  }
-  .section-promo .section-promo-inner .promo-block__img2_reversed {
-    top: 30%;
-    left: 0;
-    right: 42%;
   }
   .section-promo .section-promo-inner .promo-block__count {
     left: 20%;
@@ -2198,6 +2244,99 @@ button {
   .section-promo .section-promo-inner .promo-block__count_reversed {
     right: 20%;
     bottom: 3%;
+  }
+  .section-promo .section-promo-inner .promo-block__img1::after {
+    height: 165px;
+    /*обратить внимание при адаптации*/
+  }
+  .section-promo .section-promo-inner .promo-block__img2::after {
+    height: 165px;
+    /*обратить внимание при адаптации*/
+  }
+  .section-promo .section-promo-inner .promo-block__img1::before {
+    height: 153px;
+    /*обратить внимание при адаптации*/
+  }
+  .section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::before {
+    height: 153px;
+  }
+}
+
+@media (max-width: 650px) {
+  .section-promo .section-promo-inner {
+    max-width: 380px;
+    /*Обратить при адаптации*/
+  }
+  .section-promo .section-promo-inner .promo-block {
+    /*ПСЕВДОКЛАССЫ*/
+  }
+  .section-promo .section-promo-inner .promo-block__img1::after {
+    height: 140px;
+    /*обратить внимание при адаптации*/
+  }
+  .section-promo .section-promo-inner .promo-block__img2::after {
+    height: 140px;
+    /*обратить внимание при адаптации*/
+  }
+  .section-promo .section-promo-inner .promo-block__img1::before {
+    height: 127px;
+  }
+  .section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::before {
+    height: 127px;
+  }
+}
+
+@media (max-width: 575px) {
+  .section-promo {
+    padding: 0 15px;
+  }
+  .section-promo .section-promo-inner {
+    max-width: 350px;
+    /*ОБРАТИТЬ ВНИМАНИЕ ПРИ АДАПТАЦИИ*/
+  }
+  .section-promo .section-promo-inner .promo-block {
+    /*ПСЕВДОКЛАССЫ*/
+  }
+  .section-promo .section-promo-inner .promo-block__img1::after {
+    height: 140px;
+    /*обратить внимание при адаптации*/
+  }
+  .section-promo .section-promo-inner .promo-block__img2::after {
+    height: 140px;
+    /*обратить внимание при адаптации*/
+  }
+  .section-promo .section-promo-inner .promo-block__img1::before {
+    height: 127px;
+  }
+  .section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::before {
+    height: 127px;
+  }
+}
+
+@media (max-width: 475px) {
+  .section-promo {
+    padding: 0 15px;
+  }
+  .section-promo .section-promo-inner {
+    max-width: 380px;
+    /*Обратить при адаптации*/
+  }
+  .section-promo .section-promo-inner .promo-block {
+    /*ПСЕВДОКЛАССЫ*/
+  }
+  .section-promo .section-promo-inner .promo-block__img1::after {
+    height: 140px;
+    /*обратить внимание при адаптации*/
+  }
+  .section-promo .section-promo-inner .promo-block__img2::after {
+    height: 140px;
+    /*обратить внимание при адаптации*/
+  }
+  .section-promo .section-promo-inner .promo-block__img1::before {
+    height: 127px;
+  }
+  .section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::before {
+    height: 127px;
   }
 }
 

@@ -4,7 +4,7 @@
   align-items: center;
 }
 
-.buttom-wrapper {
+.button-wrapper {
     background: $BackgroundButtonBlock;
     min-height: 525px;
     @include flexCenter;
@@ -115,7 +115,7 @@
 
 /*=========МЕДИА ЗАПРОСЫ=========*/
 @media(max-width: 575px) {
-    .buttom-wrapper {
+    .button-wrapper {
       min-height: 350px;
     .vawe-100 {
       width: 300px;

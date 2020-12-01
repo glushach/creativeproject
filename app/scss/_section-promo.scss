@@ -82,6 +82,7 @@
         top: 30%;
         left: 100%;
         text-align: left;
+        padding-right: 0; /*ОТСУТСТВИЕ АНУЛЯЦИИ ЭТОГО ПАДДИНГА ДАЛО ДИСПРОПОРЦИЮ*/
         padding-left: 31px;
       }
       &__img1::after {
@@ -240,14 +241,15 @@
 @media(max-width: 1100px) {
   .section-promo {
     .section-promo-inner {
+      max-width: 550px; /*ОБРАТИТЬ ВНИМАНИЕ ПРИ АДАПТАЦИИ*/
       .promo-block {
-        &__img1::before {
-          display: none;
+        &__title {
+          font-size: 35px;
         }
-      }
-    }
-  }
-}
+      } //end promo-block
+    } //end section-promo-inner
+  } //end section-promo
+} //end media 
 
 @media(max-width: 950px) {
   .section-promo {
@@ -255,13 +257,9 @@
       margin: 25px 0 140px 0; /*обратить внимание при адаптации*/
     }
     .section-promo-inner {
-      margin: 0 15px;
       .promo-block {
         &__item {
           @include promoBlockItemMarginY;
-        }
-        &__img2::after {
-          display: none;
         }
         &__title {
           font-size: 40px;
@@ -269,7 +267,7 @@
         }
         &__img2 {
           top: 30%;
-          right: -7;
+          right: -7%;
           left: 42%;
           &_reversed {
             top: 30%;
@@ -282,38 +280,74 @@
   }
 }
 
-@media(max-width: 750px) {
+@media(max-width: 870px) {
+  .section-promo {
+    .section-promo-inner {
+      max-width: 450px; /*ОБРАТИТЬ ВНИМАНИЕ ПРИ АДАПТАЦИИ*/
+      .promo-block {
+        &__title {
+          margin-top: 0;
+          font-size: 27px;
+          line-height: 40px;
+        }
+        &__description {
+          font-size: 18px;
+          line-height: 30px;
+        }
+        &__count {
+          left: 14%;
+          bottom: -10%;
+        }
+        .promo-block__count_reversed {
+          right: 14%;
+        }
+       /*ПСЕВДОКЛАССЫ*/
+        &__img1::before {
+          left: -20%;
+          background-color: red;
+          height: 153px; /*обратить внимание при адаптации*/
+          padding-right: 10px;
+          padding-top: 12px;
+          font-size: 35px;
+        }
+        .promo-block__img1_reversed::before {
+          background-color: green;
+          padding-top: 12px;
+          padding-left: 10px;
+          font-size: 35px;
+        }
+        &__img1::after {
+          height: 165px; /*обратить внимание при адаптации*/
+        }
+        &__img2::after {
+          height: 165px; /*обратить внимание при адаптации*/
+        }
+        
+      } //end promo-block
+    } //end section-promo-inner
+  } //end section-promo
+} //end media
+
+
+@media(max-width: 790px) {
   .section-promo {
     @mixin promoBlockItemMarginY {
       margin: 25px 0 50px 0; /*обратить внимание при адаптации*/
     }
     .section-promo-inner {
+      max-width: 435px; /*Обратить при адаптации*/
       .promo-block {
         &__item {
           @include promoBlockItemMarginY;
         }
+
         &__title {
-          margin-top: 0;
-          font-size: 20px;
-          line-height: 25px;
+          font-size: 25px;
         }
         &__description {
           margin-bottom: 26px;
           font-size: 16px;
           line-height: normal;
-        }
-        &__img1::after {
-          display: none;
-        }
-        &__img2 {
-          top: 30%;
-          right: 0;
-          left: 42%;
-          &_reversed {
-            top: 30%;
-            left: 0;
-            right: 42%;
-          }
         }
         &__count {
           left: 20%;
@@ -325,6 +359,94 @@
             right: 20%;
             bottom: 3%;
           }
+        }
+        /*ПСЕВДОКЛАССЫ*/
+        &__img1::after {
+          height: 165px; /*обратить внимание при адаптации*/
+        }
+        &__img2::after {
+          height: 165px; /*обратить внимание при адаптации*/
+        }
+        &__img1::before {
+          height: 153px; /*обратить внимание при адаптации*/
+        }
+        .promo-block__img1_reversed::before {
+          height: 153px;
+        }
+      } //end promo-block
+    } //end section-promo-inner
+  } //end section-promo
+} //end media
+
+
+/*=====ПРОДОЛЖИТЬ АДАПТАЦИЮ С ЭТОГО МЕСТА====*/
+@media(max-width: 650px) {
+  .section-promo {
+    .section-promo-inner {
+      max-width: 380px; /*Обратить при адаптации*/
+      .promo-block {
+        /*ПСЕВДОКЛАССЫ*/
+        &__img1::after {
+          height: 140px; /*обратить внимание при адаптации*/
+        }
+        &__img2::after {
+          height: 140px; /*обратить внимание при адаптации*/
+        }
+        &__img1::before {
+          height: 127px;
+        }
+        .promo-block__img1_reversed::before {
+          height: 127px;
+        }
+      } //end promo-block
+    } //end section-promo-inner
+  } //end section-promo
+} //end media
+
+
+@media(max-width: 575px) {
+  .section-promo {
+    padding: 0 15px;
+    .section-promo-inner {
+      max-width: 350px; /*ОБРАТИТЬ ВНИМАНИЕ ПРИ АДАПТАЦИИ*/
+      .promo-block {
+        /*ПСЕВДОКЛАССЫ*/
+        &__img1::after {
+          height: 140px; /*обратить внимание при адаптации*/
+        }
+        &__img2::after {
+          height: 140px; /*обратить внимание при адаптации*/
+        }
+        &__img1::before {
+          height: 127px;
+        }
+        .promo-block__img1_reversed::before {
+          height: 127px;
+        }
+      } //end promo-block
+    } //end section-promo-inner
+  } //end section-promo
+} //end media
+
+@media(max-width: 475px) {
+  .section-promo {
+    padding: 0 15px;
+    .section-promo-inner {
+      
+      max-width: 380px; /*Обратить при адаптации*/
+      .promo-block {
+        /*ПСЕВДОКЛАССЫ*/
+        &__img1::after {
+          height: 140px; /*обратить внимание при адаптации*/
+        }
+        &__img2::after {
+          height: 140px; /*обратить внимание при адаптации*/
+        }
+        &__img1::before {
+          height: 127px;
+        }
+        .promo-block__img1_reversed::before {
+          height: 127px;
         }
       } //end promo-block
     } //end section-promo-inner
