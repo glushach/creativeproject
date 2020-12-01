@@ -6,6 +6,7 @@
     <title>Creative Project</title>
     <link rel="preconnect" href="https://fonts.gstatic.com"/>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300;1,700&amp;family=Montserrat+Alternates&amp;family=Montserrat:wght@400;600&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body>
@@ -225,42 +226,52 @@
           </ul>
           <div class="contents">
             <div class="contents__btn"><a href="#">View Pricing details</a></div>
-            <div class="slider">
-              <div class="slides">
-                <div class="slides__inner slides__inner_active">
-                  <div class="slides__icon"><img src="img/services-section/icons/icon1.png" alt=""/></div>
-                  <h4 class="slides__title">Agility</h4>
-                  <div class="slides__description">We believe in a seamless client partnership that connects us into a single unified team. We're not only agile in code but in discovery, and design.</div>
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="swiper-slide__icon"><img src="img/services-section/icons/icon1.png" alt=""/></div>
+                  <h4 class="swiper-slide__title">Agility</h4>
+                  <div class="swiper-slide__description">We believe in a seamless client partnership that connects us into a single unified team. We're not only agile in code but in discovery, and design.</div>
                 </div>
-                <div class="slides__inner">
-                  <div class="slides__icon"><img src="img/services-section/icons/icon2.png" alt=""/></div>
-                  <h4 class="slides__title">Team</h4>
-                  <div class="slides__description">Our dedicated team model ensures that every project receives the meticulous attention and resource it deserves from our Strategists, Designers, Producers, Engineers, & Filmmakers.</div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__icon"><img src="img/services-section/icons/icon2.png" alt=""/></div>
+                  <h4 class="swiper-slide__title">Team</h4>
+                  <div class="swiper-slide__description">Our dedicated team model ensures that every project receives the meticulous attention and resource it deserves from our Strategists, Designers, Producers, Engineers, & Filmmakers.</div>
                 </div>
-                <div class="slides__inner">
-                  <div class="slides__icon"><img src="img/services-section/icons/icon3.png" alt=""/></div>
-                  <h4 class="slides__title">Collaboration</h4>
-                  <div class="slides__description">Nothing we do is in isolation. Our process is extremely collaborative, leveraging our clients unique perspectives to activate our own expertise.</div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__icon"><img src="img/services-section/icons/icon3.png" alt=""/></div>
+                  <h4 class="swiper-slide__title">Collaboration</h4>
+                  <div class="swiper-slide__description">Nothing we do is in isolation. Our process is extremely collaborative, leveraging our clients unique perspectives to activate our own expertise.</div>
                 </div>
-                <div class="slides__inner">
-                  <div class="slides__icon"><img src="img/services-section/icons/icon2.png" alt=""/></div>
-                  <h4 class="slides__title">Team</h4>
-                  <div class="slides__description">Our dedicated team model ensures that every project receives the meticulous attention and resource it deserves from our Strategists, Designers, Producers, Engineers, & Filmmakers.</div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__icon"><img src="img/services-section/icons/icon1.png" alt=""/></div>
+                  <h4 class="swiper-slide__title">Agility</h4>
+                  <div class="swiper-slide__description">We believe in a seamless client partnership that connects us into a single unified team. We're not only agile in code but in discovery, and design.</div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__icon"><img src="img/services-section/icons/icon2.png" alt=""/></div>
+                  <h4 class="swiper-slide__title">Team</h4>
+                  <div class="swiper-slide__description">Our dedicated team model ensures that every project receives the meticulous attention and resource it deserves from our Strategists, Designers, Producers, Engineers, & Filmmakers.</div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="swiper-slide__icon"><img src="img/services-section/icons/icon3.png" alt=""/></div>
+                  <h4 class="swiper-slide__title">Collaboration</h4>
+                  <div class="swiper-slide__description">Nothing we do is in isolation. Our process is extremely collaborative, leveraging our clients unique perspectives to activate our own expertise.</div>
                 </div>
               </div>
-              <div class="dots" id="multiple">
-                <div class="dots__item dots__multiple dots__multiple_active">
-                  <div class="dots__inner dots__plural dots__plural_active"></div>
-                </div>
-                <div class="dots__item dots__multiple">
-                  <div class="dots__inner dots__plural"></div>
-                </div>
-                <div class="dots__item dots__multiple">
-                  <div class="dots__inner dots__plural"></div>
-                </div>
-                <div class="dots__item dots__multiple">
-                  <div class="dots__inner dots__plural"></div>
-                </div>
+            </div>
+            <div class="swiper-pagination" id="multiple">
+              <div class="swiper-pagination-bullet dots__multiple_active">
+                <div class="dots__inner dots__plural dots__plural_active"></div>
+              </div>
+              <div class="swiper-pagination-bullet">
+                <div class="dots__inner dots__plural"></div>
+              </div>
+              <div class="swiper-pagination-bullet">
+                <div class="dots__inner dots__plural"></div>
+              </div>
+              <div class="swiper-pagination-bullet">
+                <div class="dots__inner dots__plural"></div>
               </div>
             </div>
             <div class="contents__email">
@@ -451,6 +462,7 @@
         </section>
       </div>
     </main>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

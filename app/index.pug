@@ -6,6 +6,7 @@ html(lang="en")
     title Creative Project
     link(rel="preconnect" href="https://fonts.gstatic.com")
     link(href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300;1,700&family=Montserrat+Alternates&family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
     link(rel="stylesheet", href="css/style.css")
   body
     header.header-block
@@ -238,37 +239,58 @@ html(lang="en")
             .contents__btn
               a(href="#") View Pricing details
 
-            .slider
-              .slides
-                .slides__inner.slides__inner_active
-                  .slides__icon
+            .swiper-container
+              .swiper-wrapper
+
+                .swiper-slide
+                  .swiper-slide__icon
                     img(src="img/services-section/icons/icon1.png", alt="")
-                  h4.slides__title Agility
-                  .slides__description We believe in a seamless client partnership that connects us into a single unified team. We're not only agile in code but in discovery, and design.
-                .slides__inner
-                  .slides__icon
+                  h4.swiper-slide__title Agility
+                  .swiper-slide__description We believe in a seamless client partnership that connects us into a single unified team. We're not only agile in code but in discovery, and design.
+
+                .swiper-slide
+                  .swiper-slide__icon
                     img(src="img/services-section/icons/icon2.png", alt="")
-                  h4.slides__title Team
-                  .slides__description Our dedicated team model ensures that every project receives the meticulous attention and resource it deserves from our Strategists, Designers, Producers, Engineers, & Filmmakers.
-                .slides__inner
-                  .slides__icon
+                  h4.swiper-slide__title Team
+                  .swiper-slide__description Our dedicated team model ensures that every project receives the meticulous attention and resource it deserves from our Strategists, Designers, Producers, Engineers, & Filmmakers.
+
+                .swiper-slide
+                  .swiper-slide__icon
                     img(src="img/services-section/icons/icon3.png", alt="")
-                  h4.slides__title Collaboration
-                  .slides__description Nothing we do is in isolation. Our process is extremely collaborative, leveraging our clients unique perspectives to activate our own expertise.
-                .slides__inner
-                  .slides__icon
+                  h4.swiper-slide__title Collaboration
+                  .swiper-slide__description Nothing we do is in isolation. Our process is extremely collaborative, leveraging our clients unique perspectives to activate our own expertise.
+
+
+
+
+                .swiper-slide
+                  .swiper-slide__icon
+                    img(src="img/services-section/icons/icon1.png", alt="")
+                  h4.swiper-slide__title Agility
+                  .swiper-slide__description We believe in a seamless client partnership that connects us into a single unified team. We're not only agile in code but in discovery, and design.
+
+                .swiper-slide
+                  .swiper-slide__icon
                     img(src="img/services-section/icons/icon2.png", alt="")
-                  h4.slides__title Team
-                  .slides__description Our dedicated team model ensures that every project receives the meticulous attention and resource it deserves from our Strategists, Designers, Producers, Engineers, & Filmmakers.
-              .dots#multiple
-                .dots__item.dots__multiple.dots__multiple_active
-                  .dots__inner.dots__plural.dots__plural_active
-                .dots__item.dots__multiple
-                  .dots__inner.dots__plural
-                .dots__item.dots__multiple
-                  .dots__inner.dots__plural
-                .dots__item.dots__multiple
-                  .dots__inner.dots__plural
+                  h4.swiper-slide__title Team
+                  .swiper-slide__description Our dedicated team model ensures that every project receives the meticulous attention and resource it deserves from our Strategists, Designers, Producers, Engineers, & Filmmakers.
+
+                .swiper-slide
+                  .swiper-slide__icon
+                    img(src="img/services-section/icons/icon3.png", alt="")
+                  h4.swiper-slide__title Collaboration
+                  .swiper-slide__description Nothing we do is in isolation. Our process is extremely collaborative, leveraging our clients unique perspectives to activate our own expertise.
+
+
+            .swiper-pagination#multiple
+              .swiper-pagination-bullet.dots__multiple_active
+                .dots__inner.dots__plural.dots__plural_active
+              .swiper-pagination-bullet
+                .dots__inner.dots__plural
+              .swiper-pagination-bullet
+                .dots__inner.dots__plural
+              .swiper-pagination-bullet
+                .dots__inner.dots__plural
             .contents__email
               .contents__description If you'd like to get in touch, <br> you can send ud an email directly at
               .contents__link
@@ -439,5 +461,5 @@ html(lang="en")
 
 
 
-
+    script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
     script(src="js/script.js")

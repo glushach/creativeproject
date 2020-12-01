@@ -1,9 +1,9 @@
-.dots {
+.dots, .swiper-pagination {
   display: flex;
   justify-content: space-between;
   width: 113px;
   margin: 0 auto;
-  &__item {
+  &__item, &-bullet {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,8 +13,11 @@
     border-radius: 50%;
     cursor: pointer;
     transition: .5s all;
+
+    
   }
-  &__item:hover {
+
+  &__item:hover, &-bullet:hover {
     transform: scale(1.2);
   }
   
@@ -38,11 +41,11 @@
     }
   }
   /*Модификаторы*/
-  &_position {
+  &_position, &_position {
     position:absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 0;
+    bottom: 3px;
   
   }
 }
