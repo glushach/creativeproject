@@ -61,85 +61,50 @@
         animation: wave-0 linear 1s infinite;
       }
     }
-    @keyframes wave-0 {
-      0% {
-      box-shadow:0 8px 10px rgba(172, 55, 142,0.3),0 0 0 0 rgba(172, 55, 142,0.2),0 0 0 0 rgba(172, 55, 142,0.2)
-    }
-      40% {
-      box-shadow:0 8px 10px rgba(172, 55, 142,0.3),0 0 0 15px rgba(172, 55, 142,0.2),0 0 0 0 rgba(172, 55, 142,0.2)
-    }
-      80% {
-      box-shadow:0 8px 10px rgba(172, 55, 142,0.3),0 0 0 30px rgba(172, 55, 142,0),0 0 0 26.7px rgba(172, 55, 142,0.067)
-    }
-      100% {
-      box-shadow:0 8px 10px rgba(172, 55, 142,0.3),0 0 0 30px rgba(172, 55, 142,0),0 0 0 40px rgba(172, 55, 142,0.0)
-    }
-    }
-
-
-    @keyframes wave-25 {
-      0% {
-      box-shadow:0 8px 10px rgba(172, 55, 142,0.115),0 0 0 0 rgba(172, 55, 142,0.08),0 0 0 0 rgba(172, 55, 142,0.08)
-    }
-      40% {
-      box-shadow:0 8px 10px rgba(172, 55, 142,0.115),0 0 0 15px rgba(172, 55, 142,0.08),0 0 0 0 rgba(172, 55, 142,0.08)
-    }
-      80% {
-      box-shadow:0 8px 10px rgba(172, 55, 142,0.115),0 0 0 30px rgba(172, 55, 142,0),0 0 0 26.7px rgba(172, 55, 142,0.025)
-    }
-      100% {
-      box-shadow:0 8px 10px rgba(172, 55, 142,0.115),0 0 0 30px rgba(172, 55, 142,0),0 0 0 40px rgba(172, 55, 142,0.0)
-    }
-    }
-
-
-    @keyframes wave-75 {
-      0% {
-      box-shadow:0 8px 10px rgba(172, 55, 142,0.064),0 0 0 0 rgba(172, 55, 142,0.044),0 0 0 0 rgba(172, 55, 142,0.044)
-    }
-      40% {
-      box-shadow:0 8px 10px rgba(172, 55, 142,0.064),0 0 0 15px rgba(172, 55, 142,0.044),0 0 0 0 rgba(172, 55, 142,0.044)
-    }
-      80% {
-      box-shadow:0 8px 10px rgba(172, 55, 142,0.064),0 0 0 30px rgba(172, 55, 142,0),0 0 0 26.7px rgba(172, 55, 142,0.014)
-    }
-      100% {
-      box-shadow:0 8px 10px rgba(172, 55, 142,0.064),0 0 0 30px rgba(172, 55, 142,0),0 0 0 40px rgba(172, 55, 142,0.0)
-    }
-    }
-  }
-}
+  } //end wave-0
+} //end button-wrapper 
 
 
 
 
 /*=========МЕДИА ЗАПРОСЫ=========*/
-@media(max-width: 575px) {
-    .button-wrapper {
-      min-height: 350px;
+@media(max-width: 450px) {
+  .button-wrapper {
+    min-height: 400px;
     .vawe-100 {
-      width: 300px;
-      height: 300px;
+      width: 275px;
+      height: 275px;
     }
     .wave-75 {
-      width: 240px;
-      height: 240px;
+      width: 275px;
+      height: 275px;
+      animation: none;
     }
+  }
+} //end media
+
+
+@media(max-width: 380px) {
+  .button-wrapper {
+    min-height: 300px;
     .wave-50 {
-      width: 170px;
-      height: 170px;
+      @include flexCenter;
+      width: 255px;
+      height: 255px;
     }
     .wave-25 {
-      width: 105px;
-      height: 105px;
+      @include flexCenter;
+      width: 190px;
+      height: 190px;
     }
     .wave-0 {
-      width: 65px;
-      height: 65px;
+      @include flexCenter;
+      width: 150px;
+      height: 150px;
       &__link {
-        width: 55px;
-        height: 55px;
+        width: 140px;
+        height: 140px;
       }
-    }
+    } //end wave-0
   }
 } //end media

@@ -1,6 +1,10 @@
 @import "./normalize.scss";
 @import "./variables";
 @import "./mixins";
+@import "./animation";
+@import "./logo";
+@import "./social-icons";
+@import "./burger-menu";
 @import "./tabs";
 @import "./dots";
 
@@ -27,6 +31,8 @@ button {
 body {
   background: $BackgroundBody;
 }
+
+
 
 
 

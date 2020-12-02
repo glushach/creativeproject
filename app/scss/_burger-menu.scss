@@ -1,0 +1,73 @@
+.burger-menu {
+  $menuColor: grey;
+  $hoverColor: tomato;
+  $lineWidth: 70%;
+  $lineHeigth: 5px;
+  $lineOffset: 7px;
+  width: 70px;
+  height: 50px;
+  border: 1px solid $menuColor;
+  border-radius: 5px;
+  display: none;
+  margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  transition: .3s;
+  cursor: pointer;
+  // &:hover {
+  //   border: 1px solid $hoverColor;
+  // }
+  &__line {
+    display: block;
+    width: $lineWidth;
+    height: $lineHeigth;
+    background:$menuColor;
+    position: relative;
+    &::before, &::after {
+      content: '';
+      display: block;
+      background: $menuColor;
+      width: 100%;
+      height: $lineHeigth;
+      position:absolute;
+      transition: .3s;
+    }
+    
+    &::before {
+      transform: translateY(-$lineOffset);
+    }
+    &::after {
+      transform: translateY($lineOffset);
+    }
+      &_active {
+      background: transparent;
+      &::before {
+        transform: rotate(45deg);
+      }
+      &::after {
+        transform: rotate(-45deg);
+      }
+    } //end burger-menu__line_active
+  } //end burger-menu__line
+} //end burger-menu
+
+.burger-menu_active {
+  width: 25px;
+  height: 25px;
+}
+
+@media(max-width: 991px) {
+  .burger-menu {
+    display: flex;
+  }
+}
+@media(max-width: 575px) {
+  .burger-menu {
+    width: 50px;
+    height: 40px;
+  }
+  .burger-menu_active {
+    width: 25px;
+    height: 25px;
+  }
+}
