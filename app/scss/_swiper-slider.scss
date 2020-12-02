@@ -1,0 +1,73 @@
+
+
+
+.swiper-container {
+  max-width: 1596px;/*Обратить внимание при написании кода JS*/
+  margin: 0 auto;
+  padding-bottom: 65px;
+}
+
+  .swiper-slide {
+    min-height: 380px; /*Обратить внимание при адаптиции*/
+    padding: 40px 55px 0 50px;
+    &:hover {
+      background-color: #372b73;
+      background-image: linear-gradient(36.0deg, #5e00ca 11%, #d5536f 88%);
+    }
+    &__icon {
+      width: 72px;
+      height: 65px;
+      margin-bottom: 25px;
+      @include sizeImg;
+    }
+    &__title {
+      font-family: 'Lato';
+      font-size: 30px;
+      font-weight: 400;
+      color: #ffffff;
+      margin-bottom: 30px;
+    }
+    &__description {
+      font-family: 'Lato';
+      font-size: 18px;
+      line-height: 32px;
+      font-weight: 300;
+      color: #ffffff;
+    }
+  }
+/*МЕДИА ЗАПРОСЫ*/
+@media(max-width: 1639px) {
+  .swiper-container {
+    max-width: 1054px; /*Обратить внимание при написании кода JS*/
+  }
+}
+
+@media(max-width: 1099px) {
+  .swiper-container {
+    max-width: 512px; /*Обратить внимание при написании кода JS*/
+  }
+}
+
+@media(max-width: 767px) {
+  .swiper-wrapper {
+      margin-bottom: 45px;
+    }
+  .swiper-slide {
+    min-height: 360px;
+  }
+}
+
+@media(max-width: 575px) {
+  .swiper-container {
+    max-width: 290px;
+  }
+  .swiper-wrapper {
+    margin-bottom: 45px;
+    &__description {
+      font-size: 16px;
+    }
+  }
+  .swiper-slide {
+    padding: 20px 0 0 10px;
+  }
+}

@@ -117,7 +117,7 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
 
-console.log('fgdgd');
+
     //SLIDER TWO
   new Swiper('.swiper-container', {
     pagination: {
@@ -142,9 +142,8 @@ console.log('fgdgd');
       }
     },
   });
-  
 
-console.log('gsfgfg');
+
 
   //   const triggers = document.querySelectorAll('.swiper-pagination-bullet'), //все точки
   //         triggersParent = document.querySelectorAll('.swiper-pagination')[0], //родитель точек
@@ -152,7 +151,7 @@ console.log('gsfgfg');
   //   let Index = 1;
 
   //   showClassActive(Index);
-  // console.log('hi');
+
   //     function showClassActive(n) {
   //       if(n < 1) {
   //         Index = slidesArray.length;
@@ -164,11 +163,11 @@ console.log('gsfgfg');
   //         slidesArray[i].classList.remove('swiper-slide_active');
   //       }
   //       for(let i = 0; i < triggersParent.length; i++) {
-  //         triggers[i].classList.remove('dots__single_active');
+  //         triggers[i].classList.remove('swiper-pagination-bullet-active');
   //       }
   
   //       slidesArray[Index - 1].classList.add('swiper-slide_active');
-  //       triggers[Index - 1].classList.add('dots__single_active');
+  //       triggers[Index - 1].classList.add('swiper-pagination-bullet-active');
   //     }//end fn showSlides
   
   // /*С этого момента классы активности должны по нажатию на треггеры менятся*/
@@ -182,7 +181,7 @@ console.log('gsfgfg');
   
   //     triggersParent.addEventListener('click', (e) => {
   //       for(let i = 0; i < triggers.length + 1; i++) {
-  //         if(e.target.classList.contains('dots__item') && e.target == triggers[i - 1]){
+  //         if(e.target.classList.contains('swiper-pagination-bullet') && e.target == triggers[i - 1]){
   //           currentSlides(i);
   //         }
   //       }
