@@ -40,9 +40,9 @@ window.addEventListener('DOMContentLoaded', () => {
       }
 
 
-      for(let i = 0; i < singleTrigger.length; i++) {
-        singleTrigger[i].classList.remove('dots__single_active');
-      }
+      // for(let i = 0; i < singleTrigger.length; i++) {
+      //   singleTrigger[i].classList.remove('dots__single_active');
+      // }
       for(let i = 0; i < dotsSingular.length; i++) {
         dotsSingular[i].classList.remove('dots__singular_active');
       }

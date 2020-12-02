@@ -1,23 +1,16 @@
-.dots, .swiper-pagination {
-  display: flex;
-  justify-content: space-between;
+.dots {
+  @include flex(space-between);
   width: 113px;
   margin: 0 auto;
-  &__item, &-bullet {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  &__item {
     width: 25px;
     height: 25px;
     border: 2px solid transparent;
     border-radius: 50%;
     cursor: pointer;
     transition: .5s all;
-
-    
   }
-
-  &__item:hover, &-bullet:hover {
+  &__item:hover {
     transform: scale(1.2);
   }
   
@@ -27,7 +20,7 @@
     background: #48555d;
     border-radius: 50%;
   }
-  &__single, &__multiple {
+  &__single {
     &_active {
       border: 2px solid #ed751b;
     }
@@ -35,7 +28,7 @@
   &__plural {
     background: #ffffff;
   }
-  &__singular, &__plural {
+  &__singular {
     &_active {
       background: #ed751b;
     }
