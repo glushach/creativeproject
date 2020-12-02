@@ -18,7 +18,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
   //HERO SLIDER
-  const singleTrigger = document.querySelectorAll('.dots__single'),
+  const singleTrigger = document.querySelectorAll('.dots__item'),
         dotsSingle = document.querySelectorAll('#single')[0],
         slide = document.querySelectorAll('.slide'),
         leftBtn = document.querySelector('.button-block__left'),
@@ -40,11 +40,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
       for(let i = 0; i < singleTrigger.length; i++) {
-        singleTrigger[i].classList.remove('dots__single_active');
+        singleTrigger[i].classList.remove('dots__item_active');
       }
 
       slide[slideIndex - 1].style.display = 'block';
-      singleTrigger[slideIndex - 1].classList.add('dots__single_active');
+      singleTrigger[slideIndex - 1].classList.add('dots__item_active');
     }//end fn showSlides
 
 /*С этого момента слайды должны по нажатию на треггеры менятся*/
@@ -69,14 +69,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
     dotsSingle.addEventListener('click', (e) => {
       for(let i = 0; i < singleTrigger.length + 1; i++) {
-        if(e.target.classList.contains('dots__single') && e.target == singleTrigger[i - 1]){
+        if(e.target.classList.contains('dots__item') && e.target == singleTrigger[i - 1]){
           currentSlide(i);
         }
       }
     });//end event
-
-
-
 
 
   const tabs = document.querySelectorAll('.tabs__click'),
@@ -120,16 +117,8 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
 
-
-  //SLIDER TWO
-  // const truck = document.querySelector('.slides'),
-  //       slideItem = document.querySelectorAll('.slides__inner'),
-  //       sliderWidth = document.querySelector('.slider').offsetWidth,
-
-  //       dotsMultiple = document.querySelectorAll('#multiple')[0],
-  //       dotsExternal = document.querySelectorAll('.dots__multiple'),
-  //       dotsInner = document.querySelectorAll('.dots__plural');
-
+console.log('fgdgd');
+    //SLIDER TWO
   new Swiper('.swiper-container', {
     pagination: {
       el: '.swiper-pagination',
@@ -152,87 +141,51 @@ window.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 3,
       }
     },
-
   });
-  // let IndexOfSlideItem = 1,
-  //     widthArray = [0],
-  //     truckWidth = 95,
-  //     offset = 0,
-  //     step = 0,
-  //     ostatok = 0;
+  
 
-  // for(let i = 0; i < slideItem.length; i++) {
-  //   widthArray.push(slideItem[i].offsetWidth);
-  //   truckWidth += slideItem[i].offsetWidth;
-  // }
-  // truck.style.width = truckWidth + 'px';
-  // console.log(widthArray);
+console.log('gsfgfg');
 
+  //   const triggers = document.querySelectorAll('.swiper-pagination-bullet'), //все точки
+  //         triggersParent = document.querySelectorAll('.swiper-pagination')[0], //родитель точек
+  //         slidesArray = document.querySelectorAll('.swiper-slide'); //все слайды
+  //   let Index = 1;
 
-
-    // function showSlideItem (n) {
-    //   if(n < 1) {
-    //     IndexOfSlideItem = slideItem.length;
-    //   } else if (n > slideItem.length) {
-    //     IndexOfSlideItem = 1;
-    //   }
-
-    //   for(let i = 0; i < slideItem.length; i++) {
-    //     slideItem[i].classList.remove('slides__inner_active');
-    //   }
-
-
-    //   for(let i = 0; i < dotsExternal.length; i++) {
-    //     dotsExternal[i].classList.remove('dots__multiple_active');
-    //   }
-    //   for(let i = 0; i < dotsInner.length; i++) {
-    //     dotsInner[i].classList.remove('dots__plural_active');
-    //   }
-
-    //     //ЭТА ЧАСТЬ КОДУ УСТАНАВЛИВАЕТ БЛОЧНОСТЬ СЛАЙДОВ
-    //   // slides.style.transform = 'translateX('+ (-34) + '%)';
-    //   slideItem[IndexOfSlideItem - 1].classList.add('slides__inner_active');
-    //   dotsExternal[IndexOfSlideItem - 1].classList.add('dots__multiple_active');
-    //   dotsInner[IndexOfSlideItem - 1].classList.add('dots__plural_active');
-    // }//end fn showSlides
-
-    // showSlideItem(slideIndex);
-
-
-    // function currentSlideItem(n) {
-    //   showSlideItem(IndexOfSlideItem = n);
-    // }
-
-    // dotsMultiple.addEventListener('click', (e) => {
-    //   console.log('Click');
-    //   for(let i = 0; i < dotsExternal.length + 1; i++) {
-    //     if(e.target.classList.contains('dots__multiple') && e.target == dotsExternal[i - 1]){
-    //       currentSlideItem(i);
-    //       ostatok = truckWidth - sliderWidth - (offset + widthArray[step]);
-    //       if(ostatok >= 0) {
-    //         offset = offset + widthArray[step];
-    //         truck.style.left = -offset + 'px';
-    //       } else {
-    //         truck.style.left = -(truckWidth - sliderWidth) + 'px';
-    //         offset = 0;
-    //         step = 1; //мне категорически здесь нельзя ставить -1
-    //       }
-    //       if(step + 1 == slideItem.length) {
-    //         step = 0;
-    //         offset = 0;
-    //       } else {
-    //         step++;
-    //       }
-    //     }
-    //   }
-
-
-    //   for(let i = 0; i < dotsInner.length + 1; i++) {
-    //     if(e.target.classList.contains('dots__plural') && e.target == dotsInner[i - 1]){
-    //       currentSlideItem(i);
-    //     }
-    //   }
-    // });//end event
-
+  //   showClassActive(Index);
+  // console.log('hi');
+  //     function showClassActive(n) {
+  //       if(n < 1) {
+  //         Index = slidesArray.length;
+  //       } else if (n > slidesArray.length) {
+  //         Index = 1;
+  //       }
+  
+  //       for(let i = 0; i < slidesArray.length; i++) {
+  //         slidesArray[i].classList.remove('swiper-slide_active');
+  //       }
+  //       for(let i = 0; i < triggersParent.length; i++) {
+  //         triggers[i].classList.remove('dots__single_active');
+  //       }
+  
+  //       slidesArray[Index - 1].classList.add('swiper-slide_active');
+  //       triggers[Index - 1].classList.add('dots__single_active');
+  //     }//end fn showSlides
+  
+  // /*С этого момента классы активности должны по нажатию на треггеры менятся*/
+  //     function plusSlides(n) {
+  //       showClassActive(Index += n);
+  //     } //end fn plusSlides
+  
+  //     function currentSlides(n) {
+  //       showClassActive(Index = n);
+  //     }
+  
+  //     triggersParent.addEventListener('click', (e) => {
+  //       for(let i = 0; i < triggers.length + 1; i++) {
+  //         if(e.target.classList.contains('dots__item') && e.target == triggers[i - 1]){
+  //           currentSlides(i);
+  //         }
+  //       }
+  //     });//end event
 
 });

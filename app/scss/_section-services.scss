@@ -1,4 +1,22 @@
 .services-section {
+  /*4 НИЖНИХ СЕРЕКТОРА НУЖНЫ РАДИ ПОВЫШЕНИЯ СПЕЦИФИЧНОСТИ*/
+  .dots__item {
+    background: transparent;
+    opacity: 1;
+  }
+  .dots__item::before {
+    background: #ffffff;
+  }
+  .dots__item_active {
+    border: 2px solid #ed751b;
+  }
+  .dots__item_active::before {
+    width: 5px;
+    height: 5px;
+    background: #ed751b;
+    border-radius: 50%;
+  }
+
   padding-top: 24px; /*Обратить внимание при адаптации*/
   background: $BackgroundSectionServices url('../img/services-section/bg.png') left (bottom) no-repeat;
   &__title {

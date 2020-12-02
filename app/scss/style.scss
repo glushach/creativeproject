@@ -2,6 +2,7 @@
 @import "./variables";
 @import "./mixins";
 @import "./animation";
+@import "./dots";
 @import "./tabs";
 
 * {
@@ -29,34 +30,20 @@ body {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.swiper-pagination-bullet {
+  @include flex(center, center);
+  width: 25px;
+  height: 25px;
+  border: 2px solid transparent;
+  background: transparent;
+}
+.swiper-pagination-bullet::before {
+  content: '';
+  width: 5px;
+  height: 5px;
+  background: #ffffff;
+  border-radius: 50%;
+}
 
 .swiper-container {
   max-width: 1596px;/*Обратить внимание при написании кода JS*/
@@ -76,10 +63,13 @@ body {
     padding: 40px 55px 0 50px;
     border-right: 1px solid red;
     border-left: 1px solid red;
-    &:hover {
+    &_active {
       background-color: #372b73;
       background-image: linear-gradient(36.0deg, #5e00ca 11%, #d5536f 88%);
     }
+    // &:hover {
+      
+    // }
     &__icon {
       width: 72px;
       height: 65px;
@@ -103,56 +93,6 @@ body {
   }
 
 
-.dots, .swiper-pagination {
-  display: flex;
-  justify-content: space-between;
-  width: 113px;
-  margin: 0 auto;
-  position: static;
-  &__item, &-bullet {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25px;
-    height: 25px;
-    border: 2px solid transparent;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: .5s all;
-  }
-
-  &__item:hover, &-bullet:hover {
-    transform: scale(1.2);
-  }
-  
-  &__inner {
-    width: 5px;
-    height: 5px;
-    background: #48555d;
-    border-radius: 50%;
-  }
-  &__single, &__multiple {
-    &_active {
-      border: 2px solid #ed751b;
-    }
-  }
-  &__plural {
-    background: #ffffff;
-  }
-  &__singular, &__plural {
-    &_active {
-      background: #ed751b;
-    }
-  }
-  /*Модификаторы*/
-  &_position {
-    position:absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 3px;
-  
-  }
-}
 
 
 /*МЕДИА ЗАПРОСЫ*/

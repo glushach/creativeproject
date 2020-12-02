@@ -3,6 +3,7 @@
   width: 113px;
   margin: 0 auto;
   &__item {
+    @include flex(center, center);
     width: 25px;
     height: 25px;
     border: 2px solid transparent;
@@ -21,19 +22,15 @@
     transform: scale(1.2);
   }
   
-  .dots__single_active {
+  .dots__item_active {
     border: 2px solid #ed751b;
   }
-  .dots__single_active::before {
+  .dots__item_active::before {
     content: '';
     width: 5px;
     height: 5px;
     background: #ed751b;
     border-radius: 50%;
-  }
-
-  &__plural {
-    background: #ffffff;
   }
   /*Модификаторы*/
   &_position {
