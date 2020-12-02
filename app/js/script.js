@@ -19,7 +19,6 @@ window.addEventListener('DOMContentLoaded', () => {
 
   //HERO SLIDER
   const singleTrigger = document.querySelectorAll('.dots__single'),
-        dotsSingular = document.querySelectorAll('.dots__singular'),
         dotsSingle = document.querySelectorAll('#single')[0],
         slide = document.querySelectorAll('.slide'),
         leftBtn = document.querySelector('.button-block__left'),
@@ -40,16 +39,12 @@ window.addEventListener('DOMContentLoaded', () => {
       }
 
 
-      // for(let i = 0; i < singleTrigger.length; i++) {
-      //   singleTrigger[i].classList.remove('dots__single_active');
-      // }
-      for(let i = 0; i < dotsSingular.length; i++) {
-        dotsSingular[i].classList.remove('dots__singular_active');
+      for(let i = 0; i < singleTrigger.length; i++) {
+        singleTrigger[i].classList.remove('dots__single_active');
       }
 
       slide[slideIndex - 1].style.display = 'block';
       singleTrigger[slideIndex - 1].classList.add('dots__single_active');
-      dotsSingular[slideIndex - 1].classList.add('dots__singular_active');
     }//end fn showSlides
 
 /*С этого момента слайды должны по нажатию на треггеры менятся*/
@@ -78,13 +73,11 @@ window.addEventListener('DOMContentLoaded', () => {
           currentSlide(i);
         }
       }
-      for(let i = 0; i < dotsSingular.length + 1; i++) {
-        if(e.target.classList.contains('dots__singular') && e.target == dotsSingular[i - 1]){
-          currentSlide(i);
-        }
-      }
     });//end event
-   
+
+
+
+
 
   const tabs = document.querySelectorAll('.tabs__click'),
         contents = document.querySelectorAll('.contents'),

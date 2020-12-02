@@ -9,32 +9,34 @@
     border-radius: 50%;
     cursor: pointer;
     transition: .5s all;
+    &::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      background: #48555d;
+      border-radius: 50%;
+    }
   }
   &__item:hover {
     transform: scale(1.2);
   }
   
-  &__inner {
+  .dots__single_active {
+    border: 2px solid #ed751b;
+  }
+  .dots__single_active::before {
+    content: '';
     width: 5px;
     height: 5px;
-    background: #48555d;
+    background: #ed751b;
     border-radius: 50%;
   }
-  &__single {
-    &_active {
-      border: 2px solid #ed751b;
-    }
-  }
+
   &__plural {
     background: #ffffff;
   }
-  &__singular {
-    &_active {
-      background: #ed751b;
-    }
-  }
   /*Модификаторы*/
-  &_position, &_position {
+  &_position {
     position:absolute;
     left: 50%;
     transform: translateX(-50%);
