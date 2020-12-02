@@ -1858,6 +1858,7 @@ body {
           flex-wrap: nowrap;
   /*Стили втогого item*/
   /*Модификатор*/
+  /*=====ПСЕВДОКЛАССЫ=====*/
 }
 
 .section-promo .section-promo-inner .promo-block__item {
@@ -1904,76 +1905,6 @@ body {
   top: 30%;
   left: -14%;
   right: 42%;
-}
-
-.section-promo .section-promo-inner .promo-block__img1::before {
-  content: '1';
-  display: block;
-  width: 18.4%;
-  height: 207px;
-  background-color: #ed751b;
-  position: absolute;
-  top: 30%;
-  left: -23.5%;
-  -webkit-transform: rotate(180deg);
-      -ms-transform: rotate(180deg);
-          transform: rotate(180deg);
-  text-align: right;
-  color: #ffffff;
-  font-size: 43px;
-  font-family: sans-serif;
-  padding-right: 31px;
-  padding-top: 23px;
-}
-
-.section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::before {
-  background-color: #372b73;
-  top: 30%;
-  left: 100%;
-  text-align: left;
-  padding-right: 0;
-  /*ОТСУТСТВИЕ АНУЛЯЦИИ ЭТОГО ПАДДИНГА ДАЛО ДИСПРОПОРЦИЮ*/
-  padding-left: 31px;
-}
-
-.section-promo .section-promo-inner .promo-block__img1::after {
-  content: '';
-  display: block;
-  width: 23.4%;
-  height: 230px;
-  /*обратить внимание при адаптации*/
-  background-color: #ed751b;
-  background-image: -webkit-linear-gradient(35deg, #e84b37 14%, #ee7d16 85%);
-  background-image: -o-linear-gradient(35deg, #e84b37 14%, #ee7d16 85%);
-  background-image: linear-gradient(55deg, #e84b37 14%, #ee7d16 85%);
-  position: absolute;
-  top: 30%;
-}
-
-.section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::after {
-  background-image: -webkit-linear-gradient(54deg, #5e00ca 4%, #d5536f 95%);
-  background-image: -o-linear-gradient(54deg, #5e00ca 4%, #d5536f 95%);
-  background-image: linear-gradient(36deg, #5e00ca 4%, #d5536f 95%);
-  top: 30%;
-  right: 0;
-}
-
-.section-promo .section-promo-inner .promo-block__img2::after {
-  content: '';
-  display: block;
-  width: 8.8%;
-  height: 230px;
-  /*обратить внимание при адаптации*/
-  background-color: #ed751b;
-  position: absolute;
-  top: 0%;
-  right: -8.8%;
-}
-
-.section-promo .section-promo-inner .promo-block .promo-block__img2_reversed::after {
-  background-color: #ac378e;
-  top: 0%;
-  right: 100%;
 }
 
 .section-promo .section-promo-inner .promo-block__count {
@@ -2039,6 +1970,77 @@ body {
       -ms-flex-item-align: center;
               -ms-grid-row-align: center;
           align-self: center;
+}
+
+.section-promo .section-promo-inner .promo-block__img1::before {
+  content: '1';
+  display: block;
+  width: 18.4%;
+  height: 207px;
+  background-color: #ed751b;
+  position: absolute;
+  top: 30%;
+  left: -23.5%;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+  text-align: right;
+  color: #ffffff;
+  font-size: 43px;
+  font-family: sans-serif;
+  padding-right: 31px;
+  padding-top: 23px;
+}
+
+.section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::before {
+  background-color: #372b73;
+  top: 30%;
+  left: 100%;
+  /*ЭТО ТОЖЕ ТРЕБУЕТ КОРЕКТИРОВКИ В ПРОЦЕСЕ АДАПТАЦИИ*/
+  text-align: left;
+  padding-right: 0;
+  /*ОТСУТСТВИЕ АНУЛЯЦИИ ЭТОГО ПАДДИНГА ДАЛО ДИСПРОПОРЦИЮ*/
+  padding-left: 31px;
+}
+
+.section-promo .section-promo-inner .promo-block__img1::after {
+  content: '';
+  display: block;
+  width: 23.4%;
+  height: 230px;
+  /*обратить внимание при адаптации*/
+  background-color: #ed751b;
+  background-image: -webkit-linear-gradient(35deg, #e84b37 14%, #ee7d16 85%);
+  background-image: -o-linear-gradient(35deg, #e84b37 14%, #ee7d16 85%);
+  background-image: linear-gradient(55deg, #e84b37 14%, #ee7d16 85%);
+  position: absolute;
+  top: 30%;
+}
+
+.section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::after {
+  background-image: -webkit-linear-gradient(54deg, #5e00ca 4%, #d5536f 95%);
+  background-image: -o-linear-gradient(54deg, #5e00ca 4%, #d5536f 95%);
+  background-image: linear-gradient(36deg, #5e00ca 4%, #d5536f 95%);
+  top: 30%;
+  right: 0;
+}
+
+.section-promo .section-promo-inner .promo-block__img2::after {
+  content: '';
+  display: block;
+  width: 8.8%;
+  height: 230px;
+  /*обратить внимание при адаптации*/
+  background-color: #ed751b;
+  position: absolute;
+  top: 0%;
+  right: -8.8%;
+}
+
+.section-promo .section-promo-inner .promo-block .promo-block__img2_reversed::after {
+  background-color: #ac378e;
+  top: 0%;
+  right: 100%;
 }
 
 @media (max-width: 1840px) {
@@ -2142,6 +2144,10 @@ body {
   .section-promo .section-promo-inner .promo-block__title {
     font-size: 35px;
   }
+  .section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::before {
+    left: 99.3%;
+    /*ЭТО ТОЖЕ ТРЕБУЕТ КОРЕКТИРОВКИ В ПРОЦЕСЕ АДАПТАЦИИ*/
+  }
 }
 
 @media (max-width: 950px) {
@@ -2191,7 +2197,6 @@ body {
   }
   .section-promo .section-promo-inner .promo-block__img1::before {
     left: -20%;
-    background-color: red;
     height: 153px;
     /*обратить внимание при адаптации*/
     padding-right: 10px;
@@ -2199,12 +2204,12 @@ body {
     font-size: 35px;
   }
   .section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::before {
-    background-color: green;
     padding-top: 12px;
     padding-left: 10px;
     font-size: 35px;
   }
   .section-promo .section-promo-inner .promo-block__img1::after {
+    width: 20.2%;
     height: 165px;
     /*обратить внимание при адаптации*/
   }
@@ -2264,13 +2269,18 @@ body {
 
 @media (max-width: 650px) {
   .section-promo .section-promo-inner {
-    max-width: 380px;
+    max-width: 375px;
     /*Обратить при адаптации*/
   }
   .section-promo .section-promo-inner .promo-block {
     /*ПСЕВДОКЛАССЫ*/
   }
+  .section-promo .section-promo-inner .promo-block__title {
+    font-size: 20px;
+    line-height: 30px;
+  }
   .section-promo .section-promo-inner .promo-block__img1::after {
+    width: 20.1%;
     height: 140px;
     /*обратить внимание при адаптации*/
   }
@@ -2287,56 +2297,135 @@ body {
 }
 
 @media (max-width: 575px) {
-  .section-promo {
-    padding: 0 15px;
-  }
   .section-promo .section-promo-inner {
-    max-width: 350px;
+    max-width: 335px;
     /*ОБРАТИТЬ ВНИМАНИЕ ПРИ АДАПТАЦИИ*/
   }
   .section-promo .section-promo-inner .promo-block {
-    /*ПСЕВДОКЛАССЫ*/
-  }
-  .section-promo .section-promo-inner .promo-block__img1::after {
-    height: 140px;
-    /*обратить внимание при адаптации*/
-  }
-  .section-promo .section-promo-inner .promo-block__img2::after {
-    height: 140px;
-    /*обратить внимание при адаптации*/
+    /*=====ПСЕВДОКЛАССЫ=====*/
   }
   .section-promo .section-promo-inner .promo-block__img1::before {
-    height: 127px;
+    width: 11%;
+    height: 120px;
+    left: -11%;
+    padding-right: 1px;
+    padding-top: 0;
+    font-size: 25px;
   }
   .section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::before {
-    height: 127px;
+    width: 14.2%;
+    left: 97%;
+    height: 120px;
+    padding-top: 0;
+    padding-left: 1px;
+    font-size: 25px;
+  }
+  .section-promo .section-promo-inner .promo-block__img1::after {
+    width: 11.5%;
+    height: 120px;
+    /*обратить внимание при адаптации*/
+    top: 30%;
+  }
+  .section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::after {
+    top: 30%;
+    right: 0;
+  }
+  .section-promo .section-promo-inner .promo-block__img2::after {
+    width: 5%;
+    height: 120px;
+    /*обратить внимание при адаптации*/
+    right: -5%;
+  }
+  .section-promo .section-promo-inner .promo-block .promo-block__img2_reversed::after {
+    right: 100%;
   }
 }
 
-@media (max-width: 475px) {
+@media (max-width: 435px) {
+  .section-promo .section-promo-inner {
+    max-width: 290px;
+    /*ОБРАТИТЬ ВНИМАНИЕ ПРИ АДАПТАЦИИ*/
+  }
+  .section-promo .section-promo-inner .promo-block {
+    /*=====ПСЕВДОКЛАССЫ=====*/
+  }
+  .section-promo .section-promo-inner .promo-block__title {
+    font-size: 17px;
+  }
+  .section-promo .section-promo-inner .promo-block__button {
+    width: 150px;
+    height: 45px;
+  }
+  .section-promo .section-promo-inner .promo-block__img1::before {
+    height: 85px;
+    font-size: 19px;
+    width: 9.3%;
+    left: -9.3%;
+  }
+  .section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::before {
+    width: 11.8%;
+    left: 97%;
+    height: 85px;
+    font-size: 19px;
+  }
+  .section-promo .section-promo-inner .promo-block__img1::after {
+    width: 9%;
+    height: 85px;
+    /*обратить внимание при адаптации*/
+  }
+  .section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::after {
+    top: 30%;
+    right: 0;
+  }
+  .section-promo .section-promo-inner .promo-block__img2::after {
+    width: 4%;
+    height: 85px;
+    /*обратить внимание при адаптации*/
+    right: -4%;
+  }
+  .section-promo .section-promo-inner .promo-block .promo-block__img2_reversed::after {
+    right: 100%;
+  }
+}
+
+@media (max-width: 375px) {
   .section-promo {
     padding: 0 15px;
   }
   .section-promo .section-promo-inner {
-    max-width: 380px;
-    /*Обратить при адаптации*/
+    max-width: 245px;
+    /*ОБРАТИТЬ ВНИМАНИЕ ПРИ АДАПТАЦИИ*/
   }
   .section-promo .section-promo-inner .promo-block {
-    /*ПСЕВДОКЛАССЫ*/
-  }
-  .section-promo .section-promo-inner .promo-block__img1::after {
-    height: 140px;
-    /*обратить внимание при адаптации*/
-  }
-  .section-promo .section-promo-inner .promo-block__img2::after {
-    height: 140px;
-    /*обратить внимание при адаптации*/
+    /*=====ПСЕВДОКЛАССЫ=====*/
   }
   .section-promo .section-promo-inner .promo-block__img1::before {
-    height: 127px;
+    width: 9%;
+    height: 85px;
+    left: -9%;
   }
   .section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::before {
-    height: 127px;
+    width: 11.8%;
+    left: 97%;
+    height: 85px;
+  }
+  .section-promo .section-promo-inner .promo-block__img1::after {
+    width: 9%;
+    height: 85px;
+    /*обратить внимание при адаптации*/
+  }
+  .section-promo .section-promo-inner .promo-block .promo-block__img1_reversed::after {
+    top: 30%;
+    right: 0;
+  }
+  .section-promo .section-promo-inner .promo-block__img2::after {
+    width: 4%;
+    height: 85px;
+    /*обратить внимание при адаптации*/
+    right: -4%;
+  }
+  .section-promo .section-promo-inner .promo-block .promo-block__img2_reversed::after {
+    right: 100%;
   }
 }
 
