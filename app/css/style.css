@@ -360,6 +360,7 @@ template {
   }
 }
 
+/*Это все анимации для центральной кнопки*/
 @-webkit-keyframes wave-0 {
   0% {
     -webkit-box-shadow: 0 8px 10px rgba(172, 55, 142, 0.3), 0 0 0 0 rgba(172, 55, 142, 0.2), 0 0 0 0 rgba(172, 55, 142, 0.2);
@@ -378,7 +379,6 @@ template {
             box-shadow: 0 8px 10px rgba(172, 55, 142, 0.3), 0 0 0 30px rgba(172, 55, 142, 0), 0 0 0 40px rgba(172, 55, 142, 0);
   }
 }
-
 @keyframes wave-0 {
   0% {
     -webkit-box-shadow: 0 8px 10px rgba(172, 55, 142, 0.3), 0 0 0 0 rgba(172, 55, 142, 0.2), 0 0 0 0 rgba(172, 55, 142, 0.2);
@@ -471,6 +471,106 @@ template {
   100% {
     -webkit-box-shadow: 0 8px 10px rgba(172, 55, 142, 0.064), 0 0 0 30px rgba(172, 55, 142, 0), 0 0 0 40px rgba(172, 55, 142, 0);
             box-shadow: 0 8px 10px rgba(172, 55, 142, 0.064), 0 0 0 30px rgba(172, 55, 142, 0), 0 0 0 40px rgba(172, 55, 142, 0);
+  }
+}
+
+@-webkit-keyframes circle {
+  0% {
+    stroke-dashoffset: 303;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes circle {
+  0% {
+    stroke-dashoffset: 303;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@-webkit-keyframes round-way {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes round-way {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes round-button {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes round-button {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@-webkit-keyframes circle-before {
+  0% {
+    -webkit-box-shadow: 0 4px 5px rgba(237, 117, 27, 0.3), 0 0 0 0 rgba(237, 117, 27, 0.2), 0 0 0 7 rgba(237, 117, 27, 0.2);
+            box-shadow: 0 4px 5px rgba(237, 117, 27, 0.3), 0 0 0 0 rgba(237, 117, 27, 0.2), 0 0 0 7 rgba(237, 117, 27, 0.2);
+  }
+  40% {
+    -webkit-box-shadow: 0 4px 5px rgba(237, 117, 27, 0.3), 0 0 0 7px rgba(237, 117, 27, 0.2), 0 0 0 7 rgba(237, 117, 27, 0.2);
+            box-shadow: 0 4px 5px rgba(237, 117, 27, 0.3), 0 0 0 7px rgba(237, 117, 27, 0.2), 0 0 0 7 rgba(237, 117, 27, 0.2);
+  }
+  80% {
+    -webkit-box-shadow: 0 4px 5px rgba(237, 117, 27, 0.3), 0 0 0 15px rgba(237, 117, 27, 0), 0 0 0 10px rgba(237, 117, 27, 0.067);
+            box-shadow: 0 4px 5px rgba(237, 117, 27, 0.3), 0 0 0 15px rgba(237, 117, 27, 0), 0 0 0 10px rgba(237, 117, 27, 0.067);
+  }
+  100% {
+    -webkit-box-shadow: 0 4px 5px rgba(237, 117, 27, 0.3), 0 0 0 20px rgba(237, 117, 27, 0), 0 0 0 30px rgba(237, 117, 27, 0);
+            box-shadow: 0 4px 5px rgba(237, 117, 27, 0.3), 0 0 0 20px rgba(237, 117, 27, 0), 0 0 0 30px rgba(237, 117, 27, 0);
+  }
+}
+
+@keyframes circle-before {
+  0% {
+    -webkit-box-shadow: 0 4px 5px rgba(237, 117, 27, 0.3), 0 0 0 0 rgba(237, 117, 27, 0.2), 0 0 0 7 rgba(237, 117, 27, 0.2);
+            box-shadow: 0 4px 5px rgba(237, 117, 27, 0.3), 0 0 0 0 rgba(237, 117, 27, 0.2), 0 0 0 7 rgba(237, 117, 27, 0.2);
+  }
+  40% {
+    -webkit-box-shadow: 0 4px 5px rgba(237, 117, 27, 0.3), 0 0 0 7px rgba(237, 117, 27, 0.2), 0 0 0 7 rgba(237, 117, 27, 0.2);
+            box-shadow: 0 4px 5px rgba(237, 117, 27, 0.3), 0 0 0 7px rgba(237, 117, 27, 0.2), 0 0 0 7 rgba(237, 117, 27, 0.2);
+  }
+  80% {
+    -webkit-box-shadow: 0 4px 5px rgba(237, 117, 27, 0.3), 0 0 0 15px rgba(237, 117, 27, 0), 0 0 0 10px rgba(237, 117, 27, 0.067);
+            box-shadow: 0 4px 5px rgba(237, 117, 27, 0.3), 0 0 0 15px rgba(237, 117, 27, 0), 0 0 0 10px rgba(237, 117, 27, 0.067);
+  }
+  100% {
+    -webkit-box-shadow: 0 4px 5px rgba(237, 117, 27, 0.3), 0 0 0 20px rgba(237, 117, 27, 0), 0 0 0 30px rgba(237, 117, 27, 0);
+            box-shadow: 0 4px 5px rgba(237, 117, 27, 0.3), 0 0 0 20px rgba(237, 117, 27, 0), 0 0 0 30px rgba(237, 117, 27, 0);
   }
 }
 
@@ -1591,6 +1691,7 @@ body {
   }
 }
 
+/*Сама кнопка*/
 .button-wrapper {
   background: #121619;
   min-height: 525px;
@@ -1606,6 +1707,14 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
 }
 
 .button-wrapper .vawe-100 {
@@ -1621,6 +1730,14 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   width: 405px;
   height: 405px;
   background-color: rgba(172, 55, 142, 0.02);
@@ -1641,6 +1758,14 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   width: 345px;
   height: 345px;
   background-color: rgba(172, 55, 142, 0.039);
@@ -1663,6 +1788,14 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   width: 275px;
   height: 275px;
   background-color: rgba(172, 55, 142, 0.071);
@@ -1685,6 +1818,14 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
   width: 210px;
   height: 210px;
   background-color: rgba(172, 55, 142, 0.188);
@@ -1707,9 +1848,18 @@ body {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-animation: round-button 1.5s infinite;
+          animation: round-button 1.5s infinite;
   width: 170px;
   height: 170px;
-  border: 1px solid #ed751b;
   -webkit-border-radius: 50%;
           border-radius: 50%;
   cursor: pointer;
@@ -1735,6 +1885,87 @@ body {
           animation: wave-0 linear 1s infinite;
 }
 
+/*Точка крутящиеся по орбите*/
+.chart {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.unit {
+  fill: none;
+  stroke-width: 1;
+  stroke: #ed751b;
+  stroke-dashoffset: 303;
+  stroke-dasharray: 303;
+  -webkit-animation: circle 1.5s infinite;
+          animation: circle 1.5s infinite;
+}
+
+.animation-circle {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  -webkit-animation: round-way 1.5s infinite;
+          animation: round-way 1.5s infinite;
+}
+
+.circle::before, .circle::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.circle::before {
+  width: 8px;
+  height: 8px;
+  background: #ed751b;
+  border: 3px solid #ed751b;
+  z-index: 1;
+  -webkit-transform: translate(-50%, -30%);
+      -ms-transform: translate(-50%, -30%);
+          transform: translate(-50%, -30%);
+  -webkit-animation: circle-before  1.5s infinite;
+          animation: circle-before  1.5s infinite;
+}
+
 /*=========МЕДИА ЗАПРОСЫ=========*/
 @media (max-width: 450px) {
   .button-wrapper {
@@ -1757,56 +1988,24 @@ body {
     min-height: 300px;
   }
   .button-wrapper .wave-50 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
     width: 255px;
     height: 255px;
   }
   .button-wrapper .wave-25 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
     width: 190px;
     height: 190px;
   }
   .button-wrapper .wave-0 {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
     width: 150px;
     height: 150px;
   }
   .button-wrapper .wave-0__link {
     width: 140px;
     height: 140px;
+  }
+  .animation-circle {
+    width: 160px;
+    height: 160px;
   }
 }
 
