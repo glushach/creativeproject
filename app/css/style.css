@@ -574,6 +574,50 @@ template {
   }
 }
 
+/*Анимация для номеров слайдов*/
+@-webkit-keyframes round-dot {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes round-dot {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes round-count {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes round-count {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
 .dots {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1358,6 +1402,89 @@ body {
   }
 }
 
+/*Точка крутящиеся по орбите номера слайдера*/
+.figure {
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.initial {
+  fill: none;
+  stroke-width: 1;
+  stroke: #a53689;
+  stroke-dashoffset: 303;
+  stroke-dasharray: 303;
+  -webkit-animation: circle 1.5s infinite;
+          animation: circle 1.5s infinite;
+}
+
+.animation-count {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.orbit {
+  background: rgba(24, 29, 33, 0.4);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  border-radius: 50%;
+  -webkit-animation: round-dot 1.5s infinite;
+          animation: round-dot 1.5s infinite;
+}
+
+.orbit::before, .orbit::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+}
+
+.orbit::before {
+  width: 8px;
+  height: 8px;
+  background: #a53689;
+  border: 3px solid #a53689;
+  z-index: 1;
+  -webkit-transform: translate(-50%, -30%);
+      -ms-transform: translate(-50%, -30%);
+          transform: translate(-50%, -30%);
+  -webkit-animation: circle-before 1.5s infinite;
+          animation: circle-before 1.5s infinite;
+}
+
+/*сам слайдер*/
 .wrapper-slider {
   background: #121619;
   width: 100%;
@@ -1401,7 +1528,7 @@ body {
      object-fit: contain;
 }
 
-.wrapper-slider .slide__count {
+.wrapper-slider .slide__animation {
   position: absolute;
   top: 34%;
   -webkit-transform: translateY(-34%);
@@ -1409,22 +1536,40 @@ body {
           transform: translateY(-34%);
   right: 16.3%;
   /*Обратить на это внимание при адаптации*/
-  width: 106px;
-  height: 106px;
-  background: rgba(24, 29, 33, 0.4);
-  border: 1px solid #a53689;
+  z-index: 20;
+}
+
+.wrapper-slider .slide__count {
+  width: 50%;
+  height: 50%;
   -webkit-border-radius: 50%;
           border-radius: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
 }
 
 .wrapper-slider .slide__wrapper {
   width: 31px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  -webkit-animation: round-count 1.5s infinite;
+          animation: round-count 1.5s infinite;
 }
 
 .wrapper-slider .slide__wrapper img {
@@ -1539,6 +1684,10 @@ body {
   .wrapper-slider .slide__img {
     right: 350px;
   }
+  .wrapper-slider .slide__animation {
+    right: 12%;
+    /*Обратить на это внимание при адаптации*/
+  }
 }
 
 @media (max-width: 1720px) {
@@ -1551,7 +1700,7 @@ body {
   .wrapper-slider .slide__img {
     right: 250px;
   }
-  .wrapper-slider .slide__count {
+  .wrapper-slider .slide__animation {
     right: 10%;
   }
 }
@@ -1578,8 +1727,8 @@ body {
   .wrapper-slider .slide__img {
     right: 150px;
   }
-  .wrapper-slider .slide__count {
-    right: 5%;
+  .wrapper-slider .slide__animation {
+    right: 8%;
   }
 }
 
@@ -1600,7 +1749,7 @@ body {
     max-width: 890px;
     right: 200px;
   }
-  .wrapper-slider .slide__count {
+  .wrapper-slider .slide__animation {
     right: 10%;
   }
   .wrapper-slider .slide__description {
@@ -1612,7 +1761,7 @@ body {
   .wrapper-slider .slide__img {
     right: 150px;
   }
-  .wrapper-slider .slide__count {
+  .wrapper-slider .slide__animation {
     right: 10%;
   }
 }
@@ -1647,11 +1796,11 @@ body {
   .wrapper-slider .slide__description {
     font-size: 18px;
   }
-  .wrapper-slider .slide__count {
+  .wrapper-slider .slide__animation {
     width: 73px;
     height: 73px;
   }
-  .button-block__left, .button-block__right, .slide__count {
+  .button-block__left, .button-block__right, .slide__animation {
     display: none;
   }
 }

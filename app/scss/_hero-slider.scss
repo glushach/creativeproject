@@ -1,3 +1,52 @@
+/*Точка крутящиеся по орбите номера слайдера*/
+.figure {
+  transform: rotate(-90deg);
+}
+.initial {
+  fill: none;
+  stroke-width: 1;
+  stroke: #a53689;
+  stroke-dashoffset: 303;
+  stroke-dasharray: 303;
+  animation: circle 1.5s infinite;
+}
+.animation-count {
+  position: relative;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+}
+.orbit {
+  background: rgba($color: #181d21, $alpha: 0.4);
+  @include flex(center, center);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-radius: 50%;
+  animation: round-dot 1.5s infinite;
+  &::before, &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-radius: 50%;
+  }
+  &::before {
+    width: 8px;
+    height: 8px;
+    background: #a53689;
+    border: 3px solid #a53689;
+    z-index: 1;
+    transform: translate(-50%, -30%);
+    animation: circle-before 1.5s infinite;
+  }
+}
+
+/*сам слайдер*/
 .wrapper-slider {
   background: $BackgroundHeroSlider;
   width: 100%;
@@ -27,26 +76,24 @@
         object-fit: contain;
       }
     }
-    &__count {
+    &__animation {
       position:absolute;
       top: 34%;
       transform: translateY(-34%);
       right: 16.3%; /*Обратить на это внимание при адаптации*/
-      width: 106px;
-      height: 106px;
-      background: rgba($color: #181d21, $alpha: 0.4);
-      border: 1px solid #a53689;
+      z-index: 20;
+    }
+    &__count {
+      width: 50%;
+      height: 50%;
       border-radius:50%;
+      @include flex(center, center);
     }
     &__wrapper {
       width: 31px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      img {
-        width: 100%;
-      }
+      animation: round-count 1.5s infinite;
+      @include sizeImg;
+      
     }
 
     &__description {
@@ -61,7 +108,7 @@
       letter-spacing: 1.6em;
       color: #48555d;
     }
-  }
+  } //end slide
 
   .button-block__left, .button-block__right {
     position:absolute;
@@ -143,7 +190,10 @@
       &__img {
         right: 350px;
       }
-    }
+      &__animation {
+        right: 12%; /*Обратить на это внимание при адаптации*/
+      }
+    } //end slide
   }
 }
 @media(max-width: 1720px) {
@@ -154,14 +204,14 @@
       }
     }
   }
-}
+} //end medua
 @media(max-width: 1670px) {
   .wrapper-slider {
     .slide {
       &__img {
         right: 250px;
       }
-      &__count {
+      &__animation {
         right: 10%;
       }
     }
@@ -197,8 +247,8 @@
       &__img {
         right: 150px;
       }
-      &__count {
-        right: 5%;
+      &__animation {
+        right: 8%;
       }
     }
   }
@@ -221,7 +271,7 @@
         max-width: 890px;
         right: 200px;
       }
-      &__count {
+      &__animation {
         right: 10%;
       }
       &__description {
@@ -236,7 +286,7 @@
       &__img {
         right: 150px;
       }
-      &__count {
+      &__animation {
         right: 10%;
       }
     }
@@ -267,13 +317,13 @@
       &__description {
         font-size: 18px;
       }
-      &__count {
+      &__animation {
         width: 73px;
         height: 73px;
       }
     }
   }
-  .button-block__left, .button-block__right, .slide__count {
+  .button-block__left, .button-block__right, .slide__animation {
     display: none;
   }
 }
