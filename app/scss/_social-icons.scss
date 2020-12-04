@@ -1,3 +1,64 @@
+@mixin sizesQuare100 {
+  width: 100%;
+  height: 100%;
+}
+/*Точка крутящиеся по орбите номера слайдера*/
+.animation-icons {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border-radius: 50%;
+}
+.diagram {
+  transform: rotate(-90deg);
+  z-index: 10;
+}
+.initial-animation {
+  fill: none;
+  stroke-width: 1;
+  stroke-dashoffset: 303;
+  stroke: transparent; /*это путь точки*/
+  stroke-dasharray: 303;
+  animation: circle 1.5s infinite;
+  opacity: 0;
+  stroke: #a53689;
+}
+
+.orbit-circle {
+  @include flex(center, center);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border-radius: 50%;
+  animation: round-dot 1.5s infinite;
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-radius: 50%;
+  }
+  &::before {
+    width: 5px;
+    height: 5px;
+    z-index: 1;
+    transform: translate(-50%, -30%);
+    background: #a53689; /*цвет самой точки*/
+    border: 3px solid #a53689; /*цвет самой точки*/
+    opacity: 0;
+  }
+} //end orbit-circle
+/*Ховер эфекты SVG*/
+.animation-icons:hover circle, .animation-icons:hover .orbit-circle::before {
+  opacity: 1;
+}
+
+
+/*бЛОК С СООЦИАЛЬНЫМИ ИКОНКАМИ*/
 .social-icons-block {
   height: 225px;
   @include flex(space-between, flex-start, column, nowrap);
@@ -6,23 +67,31 @@
   position: relative;
   top: -11px;
   &__item {
-    width: 50px;
-    height: 50px;
-    border: 1px solid#a53689;
+    animation: round-count 1.5s infinite;
+    @include sizesQuare100;
     border-radius: 50%;
     @include flex(center, center);
+    &:hover {
+      color: #a53689;
+    }
   }
   &__link {
+    cursor: pointer;
+    transition: 0.5s all;
     display: block;
     width: 20px;
     height: 18px;
-    cursor: pointer;
-    transition: 0.5s all;
-    img {
-      width: 100%;
-      height: 100%;
-    }
+    @include flex(center, center);
   }
+    span {
+      color: #49535c;
+      font-size: 18.5px;
+      line-height: 18px;
+      text-align: center;
+      &:hover {
+        color: #a53689;
+      }
+    }
   &__link:hover {
     transform: scale(1.3);
   }
@@ -38,7 +107,6 @@
     width: 200px;
     height: auto;
     padding: 0 15px;
-    // display: none;
     &_position {
       position:absolute;
       top: 11%;
@@ -48,8 +116,12 @@
       height: 40px;
     }
     &__link {
-      width: 18px;
-      height: 17px;
+      width: 17px;
+      height: 16px;
+      span {
+        font-size: 15.5px;
+        line-height: 16px;
+      }
     }
   }
 }

@@ -1,4 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
+  //БУРГЕР МЕНЮ
   const menuItem = document.querySelectorAll('.nav'),
   hamburger = document.querySelectorAll('.burger-menu'),
   lineActive = document.querySelectorAll('.burger-menu__line');
@@ -15,7 +16,6 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
-
 
   //HERO SLIDER
   const singleTrigger = document.querySelectorAll('.dots__item'),
@@ -76,6 +76,7 @@ window.addEventListener('DOMContentLoaded', () => {
     });//end event
 
 
+//РЕАЛИЗАЦИЯ ТАБОВ
   const tabs = document.querySelectorAll('.tabs__click'),
         contents = document.querySelectorAll('.contents'),
         tabsParent = document.querySelector('.tabs');
@@ -142,49 +143,4 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     },
   });
-
-
-
-  //   const triggers = document.querySelectorAll('.swiper-pagination-bullet'), //все точки
-  //         triggersParent = document.querySelectorAll('.swiper-pagination')[0], //родитель точек
-  //         slidesArray = document.querySelectorAll('.swiper-slide'); //все слайды
-  //   let Index = 1;
-
-  //   showClassActive(Index);
-
-  //     function showClassActive(n) {
-  //       if(n < 1) {
-  //         Index = slidesArray.length;
-  //       } else if (n > slidesArray.length) {
-  //         Index = 1;
-  //       }
-  
-  //       for(let i = 0; i < slidesArray.length; i++) {
-  //         slidesArray[i].classList.remove('swiper-slide_active');
-  //       }
-  //       for(let i = 0; i < triggersParent.length; i++) {
-  //         triggers[i].classList.remove('swiper-pagination-bullet-active');
-  //       }
-  
-  //       slidesArray[Index - 1].classList.add('swiper-slide_active');
-  //       triggers[Index - 1].classList.add('swiper-pagination-bullet-active');
-  //     }//end fn showSlides
-  
-  // /*С этого момента классы активности должны по нажатию на треггеры менятся*/
-  //     function plusSlides(n) {
-  //       showClassActive(Index += n);
-  //     } //end fn plusSlides
-  
-  //     function currentSlides(n) {
-  //       showClassActive(Index = n);
-  //     }
-  
-  //     triggersParent.addEventListener('click', (e) => {
-  //       for(let i = 0; i < triggers.length + 1; i++) {
-  //         if(e.target.classList.contains('swiper-pagination-bullet') && e.target == triggers[i - 1]){
-  //           currentSlides(i);
-  //         }
-  //       }
-  //     });//end event
-
 });

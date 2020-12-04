@@ -4,7 +4,6 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Creative Project
-    link(rel="preconnect" href="https://fonts.gstatic.com")
     link(href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,300;1,700&family=Montserrat+Alternates&family=Montserrat:wght@400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet")
     link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
     link(rel="stylesheet", href="css/style.css")
@@ -35,18 +34,38 @@ html(lang="en")
                   a.menu__link(href="#") Contact
             
           .social-icons-block.social-icons-block_position
-            .social-icons-block__item
-              a.social-icons-block__link
-                img(src="img/header/header-social-icons/instagram.png", alt="")
-            .social-icons-block__item
-              a.social-icons-block__link
-                img(src="img/header/header-social-icons/facebook.png", alt="")
-            .social-icons-block__item
-              a.social-icons-block__link
-                img(src="img/header/header-social-icons/twitter.png", alt="")
-            .social-icons-block__item
-              a.social-icons-block__link
-                img(src="img/header/header-social-icons/behance.png", alt="")
+            .animation-icons
+              <svg class="diagram" width="100%" height="100%" viewbox="0 0 100 100">
+                <circle class="initial-animation" r="48" cx="50%" cy="50%"></circle>
+              </svg>
+              .orbit-circle
+                .social-icons-block__item
+                  a.social-icons-block__link
+                    <span class="icon-instagram"></span>
+            .animation-icons
+              <svg class="diagram" width="100%" height="100%" viewbox="0 0 100 100">
+                <circle class="initial-animation" r="48" cx="50%" cy="50%"></circle>
+              </svg>
+              .orbit-circle
+                .social-icons-block__item
+                  a.social-icons-block__link
+                    <span class="icon-facebook"></span>
+            .animation-icons
+              <svg class="diagram" width="100%" height="100%" viewbox="0 0 100 100">
+                <circle class="initial-animation" r="48" cx="50%" cy="50%"></circle>
+              </svg>
+              .orbit-circle
+                .social-icons-block__item
+                  a.social-icons-block__link
+                    <span class="icon-twitter"></span>
+            .animation-icons
+              <svg class="diagram" width="100%" height="100%" viewbox="0 0 100 100">
+                <circle class="initial-animation" r="48" cx="50%" cy="50%"></circle>
+              </svg>
+              .orbit-circle
+                .social-icons-block__item
+                  a.social-icons-block__link
+                    <span class="icon-behance"></span>
     main.main-block
       .container
         .wrapper-slider
@@ -348,7 +367,6 @@ html(lang="en")
               .contents__description If you'd like to get in touch, <br> you can send ud an email directly at
               .contents__link
                 a(href="mailto:hello@10x.com") hello@10x<span>.</span>com
-
 
 
 
