@@ -77,11 +77,16 @@
   .header-inner {
     /*logo-block here*/
     .nav-block {
-      width: 380px;
+      width: 360px;
     }
   }
 }
 
+@media(max-width: 1170px) {
+  .header-inner {
+    padding-left: 21px;
+  }
+}
 
 @media(max-width: 991px) {
   .header-inner {
