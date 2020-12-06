@@ -17,6 +17,11 @@
     padding: 0 35px;
   }
 }
+@media(max-width: 991px) {
+  .logo-block {
+    padding-left: 2px;
+  }
+}
 @media(max-width: 575px) { 
   .logo-block {
     &_position {

@@ -57,7 +57,7 @@
     height: 100%;
     position: absolute;
     bottom: 0;
-    border: 1px solid white;
+    border: 1px solid transparent;
   }
 
   .slide {
@@ -66,11 +66,11 @@
     overflow: hidden;
     position:absolute;
     left: 5.4%;
-    border: 1px solid tomato;
+    border: 1px solid transparent;
     &__img {
       width: 95.3%;
       height: 515px;
-      border: 1px solid green;
+      border: 1px solid transparent;
       position: relative;
       img {
         height: 100%;
@@ -79,27 +79,6 @@
         bottom: 0;
       }
     }
-    // &__img::before {
-    //   content: url("../img/hero-slider/slide1/slide-divider.png");
-    //   // content: 'fdgdgfdsgfdsg';
-    //   color: white;
-    //   // background: red;
-    //   // display: block;
-    //   width: 165px;
-    //   height: 1px;
-    //   // height: 10px;
-    //   position:absolute;
-    //   top: 34.25%; /*РАВНО УРОВНЮ НОМЕРА СЛАЙДА*/
-    //   left: 10.9%;
-    //   // position: relative;
-    //   // top: 47%;
-    //   // left: -5%;
-    //   // left: -27.2%;
-    //   // bottom: -100px;
-    //   // transform: rotate(180deg);
-    //   transform: translateX(-100%);
-    //   // overflow: hidden;
-    // }
     &__animation {
       position:absolute;
       top: 34.25%; /*РАВНО УРОВНЮ ПСЕВДОЭЛЕМЕНТА БЕФОРЕ IMG*/
@@ -117,11 +96,9 @@
       width: 31px;
       animation: round-count 1.5s infinite;
       @include sizeImg;
-      
     }
 
     &__description {
-      // width: 805px;
       width: 85.3%;
       text-align: right;
       position:absolute;
@@ -174,22 +151,10 @@
     bottom: -45px;
     transform: rotate(90deg);
   }
-  // .button-block__left::after {
-    // content: url("../img/hero-slider/slide1/slide-divider.png");
-    // display: block;
-    // width: 165px;
-    // height: 1px;
-    // position:absolute;
-    // z-index: -1;
-    // left: -27.2%;
-    // bottom: -100px;
-    // transform: rotate(90deg);
-  // }
-
   .button-block_active {
     color: #5e00ca;
   }
-/*Сдесь были dots*/
+
 
   /*Slide modify*/
   .slide__description_red {
@@ -206,15 +171,11 @@
 
 
 
-
-
-
 /*=========МЕДИА ЗАПРОСЫ=========*/
 @media(max-width: 1690px) {
   .wrapper-slider {
     .slide {
       width: 84%;
-      border: 1px solid tomato;
     }
   }
 }
@@ -223,10 +184,8 @@
   .wrapper-slider {
       .slide {
         width: 86%;
-        border: 1px solid tomato;
         &__img {
           width: 100%;
-          border: 1px solid green;
         }
         &__description {
           letter-spacing: 1em;
@@ -242,12 +201,12 @@
     }
   }
 }
+
 @media(max-width: 1440px) {
   .wrapper-slider {
     min-height: 640px;
     .slide {
       left: 6%;
-      border: 1px solid tomato;
       &__img {
         height: 450px;
       }
@@ -278,7 +237,6 @@
       left: 7.4%;
       &__img {
         height: 385px;
-        border: 1px solid green;
       }
     } //end slide
     .slide__animation {
@@ -301,11 +259,10 @@
     .slide {
       &__img {
         height: 350px;
-        border: 1px solid green;
       }
     } //end slide
     .slide__animation {
-      top: 31.2%; /*Сюда еще вернись*/
+      top: 31.2%;
     }
     .button-block__left, .button-block__right {
       top: 33.3%;
@@ -314,36 +271,52 @@
 }
 
 @media(max-width: 991px) {
+  .orbit::before {
+    width: 6px;
+    height: 6px;
+  }
   .animation-count {
-    width: 90px;
-    height: 90px;
+    width: 80px;
+    height: 80px;
   }
   .wrapper-slider {
-    min-height: 408px;
+    min-height: 456px;
     .slide {
-      width: 80%;
-      left: 8.5%;
+      width: 90.5%;
+      left: 4.8%;
       &__img {
-        height: 276px; /*Уменшино на 100 пикселей*/
-        border: 1px solid green;
+        height: 315px;
+        img {
+          right: -15px;
+        }
       }
       &__description {
         font-size: 18px;
       }
     } //end slide
     .slide__animation {
-      top: 28.55%; /*Сюда еще вернись*/
+      top: 30.8%;
     }
     .button-block__left, .button-block__right {
-      top: 30.65%;
+      top: 32.7%;
+      font-size: 13px;
     }
-  }
+    .button-block__left {
+      left: -2%;
+    }
+    .button-block__right {
+      right: -2%;
+    }
+    .button-block__right::after {
+      display: none;
+    }
+  } //end wrapper-slider
 }
 
-@media(max-width: 850px) {
+@media(max-width: 767px) {
   .orbit::before {
-    width: 6px;
-    height: 6px;
+    width: 5px;
+    height: 5px;
   }
   .animation-count {
     width: 70px;
@@ -352,61 +325,92 @@
   .wrapper-slider {
     min-height: 390px;
     .slide {
-      width: 80%;
-      left: 9%;
+      width: 96.2%;
+      left: 2%;
       &__img {
-        height: 260px; /*Уменшино на 100 пикселей*/
-        border: 1px solid green;
-      }
-      &__description {
-        font-size: 18px;
+        height: 262px;
       }
     } //end slide
     .slide__animation {
-      top: 28.55%; /*Сюда еще вернись*/
+      top: 26.5%;
     }
     .button-block__left, .button-block__right {
-      top: 30.65%;
+      display: none;
     }
-    .button-block__right::after {
-      width: 8px;
-      bottom: -8px;
-      left: 40px;
-    }
-  }
+  } //end wrapper-slider
 }
 
-
-@media(max-width: 767px) {
-  .wrapper-slider {
-    // min-height: 400px; /*Здесь это работает почему-то как max-height*/
-    // .slide__description {
-    //   bottom: 13%;
-    // }
-  }
-}
 @media(max-width: 575px) {
+  .orbit::before {
+    width: 4px;
+    height: 4px;
+  }
+  .animation-count {
+    width: 55px;
+    height: 55px;
+  }
   .wrapper-slider {
-    // min-height: 325px;
+    min-height: 334px;
     .slide {
+      width: 96.1%;
+      &__img {
+        height: 217px;
+      }
+    } //end slide
+    
+    .slide__animation {
+      top: 28.5%;
+    }
+  } //end wrapper-slider
+}
+
+
+@media(max-width: 475px) {
+  .orbit::before {
+    width: 4px;
+    height: 4px;
+  }
+  .animation-count {
+    width: 48px;
+    height: 48px;
+  }
+  .wrapper-slider {
+    min-height: 276px;
+    .slide {
+      width: 96.1%;
+      &__img {
+        height: 172px;
+      }
       &__description {
         letter-spacing: normal;
-        // bottom: 10%;
       }
+    } //end slide
+    .slide__animation {
+      top: 27.2%;
     }
-  }
-}
-@media(max-width: 480px) {
-  .wrapper-slider {
-    // min-height: 280px;
-    .slide__description {
-      bottom: 13.5%;
-    }
-  }
+  } //end wrapper-slider
 }
 
-@media(max-width: 380px) {
-  .wrapper-slider {
-    // min-height: 230px;
+
+@media(max-width: 375px) {
+  .orbit::before {
+    width: 4px;
+    height: 4px;
   }
+  .animation-count {
+    width: 48px;
+    height: 48px;
+  }
+  .wrapper-slider {
+    min-height: 249px;
+    .slide {
+      width: 96.1%;
+      &__img {
+        height: 149px;
+      }
+    } //end slide
+    .slide__animation {
+      top: 25.9%;
+    }
+  } //end wrapper-slider
 }

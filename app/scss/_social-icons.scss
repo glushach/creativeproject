@@ -98,11 +98,6 @@
 }
 @media(max-width: 991px) { 
   .social-icons-block {
-    padding: 0 35px;
-  }
-}
-@media(max-width: 575px) { 
-  .social-icons-block {
     @include flex(space-between, flex-start, row, nowrap);
     width: 200px;
     height: auto;
@@ -110,6 +105,30 @@
     &_position {
       position:absolute;
       top: 11%;
+    }
+    &__item {
+      width: 40px;
+      height: 40px;
+    }
+    &__link {
+      width: 17px;
+      height: 16px;
+      span {
+        font-size: 15.5px;
+        line-height: 16px;
+      }
+    }
+  }
+}
+@media(max-width: 575px) {
+  .social-icons-block {
+    @include flex(space-between, flex-start, row, nowrap);
+    width: 170px;
+    height: auto;
+    padding: 0;
+    &_position {
+      position:absolute;
+      top: 9.5%;
     }
     &__item {
       width: 40px;

@@ -6,6 +6,7 @@
   $lineOffset: 7px;
   width: 70px;
   height: 50px;
+  
   border: 1px solid $menuColor;
   border-radius: 5px;
   display: none;
@@ -14,9 +15,10 @@
   align-items: center;
   transition: .3s;
   cursor: pointer;
-  // &:hover {
-  //   border: 1px solid $hoverColor;
-  // }
+  &_position {
+    position: relative;
+    right: 23px;
+  }
   &__line {
     display: block;
     width: $lineWidth;
@@ -59,6 +61,14 @@
 @media(max-width: 991px) {
   .burger-menu {
     display: flex;
+  }
+}
+
+@media(max-width: 767px) {
+  .burger-menu {
+    &_position {
+      right: 0;
+    }
   }
 }
 @media(max-width: 575px) {

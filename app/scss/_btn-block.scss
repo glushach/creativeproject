@@ -108,6 +108,11 @@
 
 
 /*=========МЕДИА ЗАПРОСЫ=========*/
+@media(max-height: 991px) {
+  .button-wrapper {
+    min-height: 480px;
+  }
+}
 @media(max-width: 450px) {
   .button-wrapper {
     min-height: 400px;
