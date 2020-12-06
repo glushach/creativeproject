@@ -1,0 +1,98 @@
+.nav-block {
+  width: 500px;
+  &_margin-left-auto {
+    margin-left: auto;
+  }
+  &_margin {
+    margin: 53px auto 43px auto;
+  }
+}
+
+.menu {
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  &__item {
+    transition: 0.5s all;
+  }
+  &__item:hover {
+    transform: scale(1.1);
+  }
+  &__link {
+    font-family: "Lato";
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #53595c;
+      &_active {
+      color: #a53689;
+    }
+  }
+}
+
+@media(max-width: 1300px) {
+  .nav-block {
+    width: 450px;
+  }
+}
+
+@media(max-width: 1200px) {
+  .nav-block {
+    width: 325px;
+  }
+}
+
+@media(max-width: 991px) {
+.nav-block {
+  width: 180px;
+}
+.nav {
+  display: none;
+  position:absolute;
+  &_active {
+    display: block;
+    @include animation;
+  }
+}
+.menu {
+  height: auto;
+  flex-direction: column;
+    &__item {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+@media(max-width: 991px) {
+.nav-block {
+  width: 180px;
+}
+.nav {
+  display: none;
+  &_absolute {
+  position:absolute;
+  top: 13px;
+  right: 67px;
+  }
+  &_active {
+  display: block;
+  @include animation;
+}
+}
+.menu {
+  height: auto;
+  flex-direction: column;
+    &__item {
+      margin-bottom: 8px;
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .nav-block {
+    width: 135px;
+    padding-right: 15px;
+  }
+}

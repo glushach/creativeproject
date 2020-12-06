@@ -31,7 +31,132 @@ body {
   background: $BackgroundBody;
 }
 
+.footer-inner {
+  padding: 210px 15px 200px 15px;
+  background: url('../img/footer/bg.png') left (bottom) no-repeat;
+  overflow: hidden;
+  .social-icons-block {
+    @include flex(space-between, flex-start, row, nowrap);
+    width: 200px;
+    height: auto;
+    padding: 0 15px;
+    &_m0auto {
+      margin: 0 auto;
+    }
+  }
+  .menu {
+    width: 530px;
+    &__item {
+      border-right: 1px solid #53595c;
+      padding-right: 41px;
+      transform: skewX(-20deg);
+      a {
+        display: block;
+        transform: skewX(20deg);
+      }
+    }
+    &__item:last-child {
+      border-right: none;
+    }
+  }
+  .nav {
+    position: relative;
+    &:before, &:after {
+      content: '';
+      width: 500px;
+      height: 1px;
+      position:absolute;
+      transform: translateY(-50%);
+      top: 50%;
+    }
+    &::before {
+      background-image: linear-gradient( -180deg, rgb(94,0,202) 0%, rgb(213,83,111) 100%);
+      left: -117%;
+    }
+    &:after {
+      background-image: linear-gradient( 0deg, rgb(94,0,202) 0%, rgb(213,83,111) 100%);
+      right: -114%;
+    }
+  }
+}
+
+@media(max-width: 1725px) {
+  .footer-inner {
+    .nav {
+      &:before, &:after {
+        width: 400px;
+      }
+      &::before {
+        left: -90%;
+      }
+      &:after {
+        right: -89%;
+      }
+    }
+  }
+}
+
+@media(max-width: 1500px) {
+  .footer-inner {
+    .nav {
+      &:before, &:after {
+        width: 300px;
+      }
+      &::before {
+        left: -70%;
+      }
+      &:after {
+        right: -67%;
+      }
+    }
+  }
+}
+
+@media(max-width: 1300px) {
+  .footer-inner {
+    .nav {
+      &:before, &:after {
+        width: 200px;
+      }
+      &::before {
+        left: -44%;
+      }
+      &:after {
+        right: -42%;
+      }
+    }
+  }
+}
+
+
+@media(max-width: 1100px) {
+  .footer-inner {
+    .menu {
+      width: 415px;
+      &__item {
+        padding-right: 25px;
+      }
+    }
+    .nav {
+      &:before, &:after {
+        width: 100px;
+      }
+      &::before {
+        left: -34.5%;
+      }
+      &:after {
+        right: -42%;
+      }
+    }
+  }
+}
+
+@media(max-width: 991px) {
+
+}
+
 @import "./header";
+@import "./nav-block";
 @import "./hero-slider";
 @import "./btn-block";
 @import "./title-block";

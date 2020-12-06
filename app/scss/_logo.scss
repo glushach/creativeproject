@@ -1,5 +1,12 @@
 .logo-block {
-  padding: 0 85px 0 60px;
+  width: 240px;
+  padding: 0 60px;
+  display: block;
+  @include flex(center);
+  @include sizeImg;
+  &_m0auto {
+    margin: 0 auto;
+  }
   &__link {
     display: block;
     width: 119px;
@@ -10,24 +17,18 @@
   &__link:hover {
     transform: scale(1.1);
   }
-  @include sizeImg;
 }
+
+
 @media(max-width: 1170px) {
   .logo-block {
     padding: 0 35px;
   }
 }
-@media(max-width: 991px) {
+
+@media(max-width: 575px) {
   .logo-block {
-    padding-left: 2px;
-  }
-}
-@media(max-width: 575px) { 
-  .logo-block {
-    &_position {
-      position:absolute;
-      top: 41%;
-    }
-    padding: 0 15px;
+    padding: 0;
+    width: 119px;
   }
 }
