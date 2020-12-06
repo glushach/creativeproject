@@ -96,7 +96,7 @@
     transform: scale(1.3);
   }
 }
-@media(max-width: 991px) { 
+@media(max-width: 991px) {
   .social-icons-block {
     @include flex(space-between, flex-start, row, nowrap);
     width: 200px;
@@ -104,7 +104,7 @@
     padding: 0 15px;
     &_position {
       position:absolute;
-      top: 9.5%;
+      top: 8%;
     }
     &__item {
       width: 40px;
@@ -126,10 +126,6 @@
     width: 170px;
     height: auto;
     padding: 0;
-    &_position {
-      position:absolute;
-      top: 9.5%;
-    }
     &__item {
       width: 40px;
       height: 40px;

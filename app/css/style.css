@@ -1290,7 +1290,7 @@ body {
   }
   .social-icons-block_position {
     position: absolute;
-    top: 9.5%;
+    top: 8%;
   }
   .social-icons-block__item {
     width: 40px;
@@ -1331,10 +1331,6 @@ body {
     width: 170px;
     height: auto;
     padding: 0;
-  }
-  .social-icons-block_position {
-    position: absolute;
-    top: 9.5%;
   }
   .social-icons-block__item {
     width: 40px;
