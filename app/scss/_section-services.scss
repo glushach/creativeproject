@@ -144,10 +144,14 @@
 
 @media(max-width: 991px) {
   .services-section {
+    padding: 0 15px;
     &__title-main {
       font-size: 35px;
     }
     .contents {
+      &__description {
+        font-size: 44px;
+      }
       &__email {
         margin-top: 100px;
       }

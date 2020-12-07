@@ -58,14 +58,15 @@
   height: 25px;
 }
 
-@media(max-width: 991px) {
-  .burger-menu {
-    display: flex;
-  }
-}
+// @media(max-width: 991px) {
+//   .burger-menu {
+//     display: flex;
+//   }
+// }
 
 @media(max-width: 767px) {
   .burger-menu {
+    display: flex;
     &_position {
       right: 0;
     }

@@ -13,19 +13,17 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  
-  &__item {
-    transition: 0.5s all;
-  }
-  &__item:hover {
-    transform: scale(1.1);
-  }
   &__link {
+    display: block; /*Без этого hover не работает*/
     font-family: "Lato";
     font-size: 15px;
     font-weight: 700;
     text-transform: uppercase;
     color: #53595c;
+    transition: 0.5s all;
+      &:hover {
+        transform: scale(1.1);
+      }
       &_active {
       color: #a53689;
     }
@@ -44,55 +42,27 @@
   }
 }
 
-@media(max-width: 991px) {
-.nav-block {
-  width: 180px;
-}
-.nav {
-  display: none;
-  position:absolute;
-  &_active {
-    display: block;
-    @include animation;
-  }
-}
-.menu {
-  height: auto;
-  flex-direction: column;
-    &__item {
-      margin-bottom: 15px;
-    }
-  }
-}
-
-@media(max-width: 991px) {
-.nav-block {
-  width: 180px;
-}
-.nav {
-  display: none;
-  &_absolute {
-  position:absolute;
-  top: 13px;
-  right: 67px;
-  }
-  &_active {
-  display: block;
-  @include animation;
-}
-}
-.menu {
-  height: auto;
-  flex-direction: column;
-    &__item {
-      margin-bottom: 8px;
-    }
-  }
-}
-
 @media(max-width: 767px) {
   .nav-block {
     width: 135px;
-    padding-right: 15px;
+  }
+  .nav {
+    display: none;
+    &_absolute {
+    position:absolute;
+    top: 18px;
+    right: 67px;
+  }
+    &_active {
+      display: block;
+      @include animation;
+    }
+  }
+  .menu {
+    height: auto;
+    flex-direction: column;
+    &__item {
+      margin-bottom: 8px;
+    }
   }
 }

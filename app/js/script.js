@@ -1,21 +1,14 @@
 window.addEventListener('DOMContentLoaded', () => {
   //БУРГЕР МЕНЮ
-  const menuItem = document.querySelectorAll('.nav'),
-  hamburger = document.querySelectorAll('.burger-menu'),
-  lineActive = document.querySelectorAll('.burger-menu__line');
+  const menuItem = document.querySelector('.nav'),
+  hamburger = document.querySelector('.burger-menu'),
+  lineActive = document.querySelector('.burger-menu__line');
 
-  hamburger.forEach(item => {
-    item.addEventListener('click', () => {
-      item.classList.toggle('burger-menu_active');
-
-      lineActive.forEach(item => {
-        item.classList.toggle('burger-menu__line_active');
-      });
-      menuItem.forEach(item => {
-        item.classList.toggle('nav_active');
-      });
-    });
-  });
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('burger-menu_active');
+    lineActive.classList.toggle('burger-menu__line_active');
+    menuItem.classList.toggle('nav_active');
+  })
 
   //HERO SLIDER
   const singleTrigger = document.querySelectorAll('.dots__item'),
@@ -119,7 +112,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 
 
-    //SLIDER TWO
+  //SLIDER TWO
   new Swiper('.swiper-container', {
     pagination: {
       el: '.swiper-pagination',

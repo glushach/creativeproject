@@ -1,5 +1,6 @@
 .logo-block {
   width: 240px;
+  height: 29px;
   padding: 0 60px;
   display: block;
   @include flex(center);
@@ -23,6 +24,13 @@
 @media(max-width: 1170px) {
   .logo-block {
     padding: 0 35px;
+  }
+}
+
+@media(max-width: 991px) {
+  .logo-block {
+    width: 119px;
+    padding: 0;
   }
 }
 

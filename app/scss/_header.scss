@@ -54,10 +54,32 @@
 @media(max-width: 991px) {
   .header-inner {
     min-height: 150px;
-    padding-top: 15px;
+    padding: 30px;
+    border-bottom: 1px solid transparent;
   }
   .contact-block {
-    
+    padding-left: 20px;
+      &__phone {
+      a {
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .header-inner {
+    min-height: 130px;
+    padding: 15px;
+  }
+}
+
+@media(max-width: 575px) {
+  .header-inner {
+    min-height: 180px;
+  }
+  .contact-block {
+    padding-left: 2px;
     &__icon {
       margin-right: 5px;
     }
@@ -68,16 +90,9 @@
     }
     &_position {
       position:absolute;
-      left: 5%;
-      bottom: 48%;
+      left: calc(0% + 15px);
+      bottom: 50%;
     }
   }
 }
-
-@media(max-width: 767px) {
-  .header-inner {
-    padding-left: 15px;
-  }
-}
-
 
